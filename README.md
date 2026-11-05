@@ -1,32 +1,45 @@
-# Modrion Netspro
+# Modrion NetSpectre
 
-Dieses Verzeichnis ist ein eigenständiges Netspro-Projekt. Es enthält den Anwendungscode, CMake-Datei und die JSON-Bibliothek, die zum Bauen gebraucht wird. Es benötigt keine Dateien aus dem übergeordneten Netspro-Projekt.
+Modrion NetSpectre is also known as Nets or Netspro. This directory contains the standalone project, including its
+application source code, CMake build file, and the JSON library required to build it. It does not depend on files from
+the parent repository.
 
-## Bauen
+## Build
 
-Voraussetzung ist CMake 3.20 oder neuer sowie ein installierter C++-Compiler.
+You need CMake 3.20 or later and an installed C++ compiler.
 
 ```sh
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build --parallel
 ```
 
-Der Build legt das Programm `Netspro` direkt in diesem Verzeichnis ab.
+The build places the `Netspro` executable (an alias for Modrion NetSpectre) in this directory.
 
-## Starten
+## Run
 
-Im Terminal in dieses Verzeichnis wechseln und starten:
+Open a terminal in this directory and run:
 
 ```sh
 ./Netspro
 ```
 
-Auf macOS kann alternativ `start.command` geöffnet werden.
+On macOS, you can also open `start.command`.
 
-## Inhalt
+In the CLI, enter `credits` to view the project credits and attribution. The `--credits` alias is also available.
 
-- `src/main.cpp`: Hauptprogramm.
-- `third_party/nlohmann/`: gebündelte nlohmann/json-3.12.0-Header und Lizenz; beim Bauen ist kein Download nötig.
-- `config.json`: wird beim ersten Programmstart automatisch angelegt.
+## Contents
 
-Die JARVIS- und Welcome-Setup-Komponenten aus dem Hauptprojekt sind nicht Teil dieses eigenständigen Projekts.
+- `src/main.cpp`: application entry point and implementation.
+- `third_party/nlohmann/`: bundled nlohmann/json 3.12.0 headers and license; no download is needed to build the project.
+- `themes/`: JSON theme files used by the terminal interface.
+- `config.json`: created automatically on the first launch.
+
+The JARVIS and Welcome Setup components from the parent repository are not included in this standalone project.
+
+## License
+
+Licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
+
+Additional attribution terms apply under Section 7 (b).
+
+See [ADDITIONAL_TERMS.md](ADDITIONAL_TERMS.md).

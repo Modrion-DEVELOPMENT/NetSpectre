@@ -1,10 +1,12 @@
 //
 //  main.cpp
-//  Netspro
+//  Modrion NetSpectre (also known as Nets or Netspro)
 //
-//  Created by Hendrik Hanking on 31.12.25.
-//  COPYRIGHT Hendrik Vincent Hanking 2025
-//  All rights reserved
+//  Copyright (C) 2025 Hendrik Vincent Hanking
+//  SPDX-License-Identifier: AGPL-3.0-only
+//  See the LICENSE file for the full license text.
+//  See ADDITIONAL_TERMS.md for additional attribution terms.
+//  Developed by the Modrion Intelligence Developer Team
 //
 
 #include <chrono>
@@ -30,8 +32,9 @@ void logo();
 bool dev_mode = false;
 bool developer = false;
 bool pro_basic = false;
-// AkteViewer
-void fakeLoading(double zeit);
+// Record Viewer
+void fakeLoading(double durationSeconds);
+
 void openRecordInteractive();
 void openRecordFile(const std::string& fileName);
 std::string createNewRecord();
@@ -54,6 +57,14 @@ std::string shuffle_string(std::string s);
 long long random_int64(long long lo, long long hi);
 std::mt19937& rng();
 bool endsWith(const std::string& str, const std::string& suffix);
+nlohmann::json loadTheme(const std::string &themeName);
+
+std::string ansiColor(const std::string &colorName);
+
+std::string mainColor();
+
+void readInputLine(std::string &value);
+
 
 // ===================== Variables =====================
 std::string inputLine;
@@ -67,22 +78,33 @@ nlohmann::json appConfig;
 std::vector<std::string> userTokens;
 std::vector<std::string> proBasicTokens;
 std::vector<std::string> devTokens;
+nlohmann::json activeTheme;
 
 static const std::vector<int> SHIFT = {9, 9, 4, 13, 2, 10, 3};
 
 
 // ===================== Main =====================
 int main() {
+    createJsonFile("config.json", {
+                       {"version", 1},
+                       {"theme", "dark"},
+                       {"settings", nlohmann::json::object()}
+                   });
     try {
         createJsonFile("config.json", {
             {"version", 1},
             {"settings", nlohmann::json::object()}
         });
         appConfig = readJsonFile("config.json");
+        appConfig = readJsonFile("config.json");
+
+        const std::string themeName = appConfig.value("theme", "dark");
+        activeTheme = loadTheme(themeName);
     } catch (const std::exception& error) {
         std::cerr << "Configuration error: " << error.what() << '\n';
         return 1;
     }
+
 
     clearTerminal();
     initializeTokens();
@@ -108,7 +130,7 @@ std::string getSerialNumber() {
 
     char buffer[256];
 
-    // moderner Ersatz für WMIC
+    // Modern replacement for WMIC.
     const char* cmd =
     "powershell -NoProfile -Command \"(Get-CimInstance Win32_BIOS).SerialNumber\"";
 
@@ -167,26 +189,30 @@ void clearTerminal() {
 #else
     std::system("clear");
 #endif
+    std::cout << mainColor();
 }
 
 void readUserInput() {
-    std::cout << "NETSPECTRE@" << serialNumber;
+    std::cout << "NETSPECTRE@"
+            << ansiColor(activeTheme.at("accent").get<std::string>())
+            << serialNumber << mainColor();
     if (dev_mode) std::cout << "[DEV]";
     else if (pro_basic) std::cout << "[PRO]";
     std::cout << ">>> ";
-    std::getline(std::cin, inputLine);
+    readInputLine(inputLine);
 }
 
 // ===================== Command Handling =====================
 static void help() {
     std::cout << "\nCommands:\n";
-    std::cout << "  info                - Version/Serial\n";
+    std::cout << "  info                - show version and serial number\n";
     std::cout << "  cls | clear          - clear terminal\n";
     std::cout << "  cls -l | clear -l    - clear + redraw logo\n";
-    std::cout << "  record              - AkteViewer interactive mode\n";
+    std::cout << "  record              - open the Record Viewer\n";
     std::cout << "  record new          - create and open new record\n";
     std::cout << "  record open <Name>  - open <Name>.persondata\n";
     std::cout << "  help                - show command list\n";
+    std::cout << "  credits | --credits - show project credits and attribution\n";
     std::cout << "  exit                - quit program\n";
     std::cout << "\nPro Basic Commands:\n";
     std::cout << "  proinfo             - show Pro Basic account info\n";
@@ -205,12 +231,14 @@ void processInput() {
     std::string cmd = trim(inputLine);
 
     if (cmd == "info") {
-        std::cout << "NetSpectre Pro Terminal C++ edition\n";
+        std::cout << "Modrion NetSpectre C++ edition\n";
         std::cout << "V." << version << "\n";
         std::cout << "Serial number: " << serialNumber << "\n";
         std::cout << "Dev mode: " << (dev_mode ? "true" : "false") << "\n";
-    }
-    else if (cmd == "cls" || cmd == "clear") {
+    } else if (cmd == "credits" || cmd == "--credits") {
+        std::cout << "Credits: Hendrik Hanking and the Modrion Intelligence Developer Team.\n";
+        std::cout << "Originally developed by the Modrion Intelligence Developer Team.\n";
+    } else if (cmd == "cls" || cmd == "clear") {
         clearTerminal();
     }
     else if (cmd == "cls -l" || cmd == "clear -l") {
@@ -310,12 +338,12 @@ void initializeTokens() {
 void login() {
     logo();
     std::cout << "\nUsername: ";
-    std::getline(std::cin, username);
+    readInputLine(username);
     clearTerminal();
 
     logo();
     std::cout << "\nPassword for " << username << ": ";
-    std::getline(std::cin, password);
+    readInputLine(password);
 
     composedToken = username + "." + password;
 
@@ -359,12 +387,12 @@ void showMainScreen() {
         std::cout << "Version: " << version << "\n";
     }
     else if (pro_basic) {
-        std::cout << "Welcome to NETSPECTRE PRO C++ [PRO BASIC]\n";
+        std::cout << "Welcome to Modrion NetSpectre C++ [PRO BASIC]\n";
         std::cout << "Version: " << short_version << "\n";
         std::cout << "Feedback: Hendrik.Hanking@icloud.com.\n";
     }
     else {
-        std::cout << "Welcome to NETSPECTRE PRO C++\n";
+        std::cout << "Welcome to Modrion NetSpectre C++\n";
         std::cout << "Version: " << short_version << "\n";
         std::cout << "Feedback: Hendrik.Hanking@icloud.com.\n";
     }
@@ -373,25 +401,24 @@ void showMainScreen() {
 }
 
 void logo() {
+    const std::string textColor = mainColor();
+    const std::string accentColor = ansiColor(activeTheme.at("accent").get<std::string>());
+
+    std::cout << textColor << R"(   _  __    __    ____             __            ___  ___  ____ )" << "\n";
+    std::cout << textColor << R"(  / |/ /__ / /_  / __/__  ___ ____/ /________   / _ \/ _ \/ __ \)" << "\n";
+    std::cout << textColor << R"( /    / -_) __/ _\ \/ _ \/ -_) __/ __/ __/ -_) / ___/ , _/ /_/ /)" << "\n";
+    std::cout << textColor << R"(/_/|_/\__/\__/ /___/ .__/\__/\__/\__/__/  \__/ /_/  /_/|_|\____/ )" << "\n";
+    std::cout << textColor << "C++ EDITION       /_/" << accentColor;
     if (dev_mode) {
-        std::cout << R"(   _  __    __    ____             __            ___  ___  ____ )" << "\n";
-        std::cout << R"(  / |/ /__ / /_  / __/__  ___ ____/ /________   / _ \/ _ \/ __ \)" << "\n";
-        std::cout << R"( /    / -_) __/ _\ \/ _ \/ -_) __/ __/ __/ -_) / ___/ , _/ /_/ /)" << "\n";
-        std::cout << R"(/_/|_/\__/\__/ /___/ .__/\__/\__/\__/_/  \__/ /_/  /_/|_|\____/ )" << "\n";
-        std::cout << R"(C++ EDITION       /_/                     Welcome developer! :) )" << "\n";
+        std::cout << "                     Welcome developer! :)";
     }
-    else {
-        std::cout << R"(   _  __    __    ____             __            ___  ___  ____ )" << "\n";
-        std::cout << R"(  / |/ /__ / /_  / __/__  ___ ____/ /________   / _ \/ _ \/ __ \)" << "\n";
-        std::cout << R"( /    / -_) __/ _\ \/ _ \/ -_) __/ __/ __/ -_) / ___/ , _/ /_/ /)" << "\n";
-        std::cout << R"(/_/|_/\__/\__/ /___/ .__/\__/\__/\__/_/  \__/ /_/  /_/|_|\____/ )" << "\n";
-        std::cout << R"(C++ EDITION       /_/                                           )" << "\n";
-    }
+    std::cout << mainColor() << "\n";
 }
-// ===================== AkteViewer - UX =====================
-void fakeLoading(double zeit) {
+
+// ===================== Record Viewer - UX =====================
+void fakeLoading(double durationSeconds) {
     constexpr int steps = 10;
-    double waitSeconds = zeit / static_cast<double>(steps);
+    double waitSeconds = durationSeconds / static_cast<double>(steps);
 
     for (int fillSteps = 0; fillSteps <= steps; ++fillSteps) {
         clearTerminal();
@@ -405,7 +432,7 @@ void openRecordInteractive() {
     clearTerminal();
     std::string fileName;
     std::cout << "Which file name should be opened? (new = create new record): ";
-    std::getline(std::cin, fileName);
+    readInputLine(fileName);
     fileName = trim(fileName);
 
     if (to_lower(fileName) == "new") {
@@ -445,14 +472,14 @@ void openRecordFile(const std::string& fileName) {
     while (true) {
         std::string newEntry;
         std::cout << "> ";
-        std::getline(std::cin, newEntry);
+        readInputLine(newEntry);
 
         if (trim(newEntry).empty()) {
             fakeLoading(1);
 
-            std::string verschluesselt_text = encryptText(content_plain);
+            std::string encryptedText = encryptText(content_plain);
             try {
-                write_file_utf8(fullname, verschluesselt_text);
+                write_file_utf8(fullname, encryptedText);
             } catch (...) {
                 std::cout << "ERROR: Could not save file.\n";
                 std::this_thread::sleep_for(std::chrono::seconds(2));
@@ -463,7 +490,7 @@ void openRecordFile(const std::string& fileName) {
             std::cout << "Saved.\n";
             std::cout << "ENTER...";
             std::string dummy;
-            std::getline(std::cin, dummy);
+            readInputLine(dummy);
             return;
         }
 
@@ -481,11 +508,11 @@ std::string createNewRecord() {
         std::string firstName, name;
 
         std::cout << "First name: ";
-        std::getline(std::cin, firstName);
+        readInputLine(firstName);
         firstName = trim(firstName);
 
         std::cout << "Last name: ";
-        std::getline(std::cin, name);
+        readInputLine(name);
         name = trim(name);
 
         if (name.empty()) {
@@ -500,7 +527,7 @@ std::string createNewRecord() {
 
         std::string key;
         std::cout << "Enter KEY (empty = random key): ";
-        std::getline(std::cin, key);
+        readInputLine(key);
         key = trim(key);
 
         if (key.empty()) {
@@ -670,6 +697,58 @@ void createJsonFile(const std::string& path, const nlohmann::json& initialDocume
     if (!output) {
         throw std::runtime_error("Failed while creating JSON file: " + path);
     }
+}
+
+std::string ansiColor(const std::string &colorName) {
+    if (colorName == "black") return "\033[30m";
+    if (colorName == "red") return "\033[31m";
+    if (colorName == "green") return "\033[32m";
+    if (colorName == "yellow") return "\033[33m";
+    if (colorName == "blue") return "\033[34m";
+    if (colorName == "magenta") return "\033[35m";
+    if (colorName == "cyan") return "\033[36m";
+    if (colorName == "white") return "\033[37m";
+
+    throw std::runtime_error("Unknown theme color: " + colorName);
+}
+
+std::string mainColor() {
+    const std::string colorName = activeTheme.value(
+        "main", activeTheme.value("text", "white")
+    );
+    return ansiColor(colorName);
+}
+
+void readInputLine(std::string &value) {
+    std::cout << ansiColor(activeTheme.at("input").get<std::string>());
+    std::getline(std::cin, value);
+    std::cout << mainColor();
+}
+
+nlohmann::json loadTheme(const std::string &themeName) {
+    // Only allow simple names, not paths such as "../some-file".
+    if (themeName.empty() ||
+        themeName.find_first_not_of(
+            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
+        ) != std::string::npos) {
+        throw std::runtime_error("Invalid theme name.");
+    }
+
+    nlohmann::json theme = readJsonFile("themes/" + themeName + ".json");
+
+    const char *mainKey = theme.contains("main") ? "main" : "text";
+    for (const char *key: {"background", mainKey, "accent", "input"}) {
+        if (!theme.contains(key) || !theme.at(key).is_string()) {
+            throw std::runtime_error(
+                std::string("Theme is missing a string value for: ") + key
+            );
+        }
+
+        // Check that the color name is supported.
+        ansiColor(theme.at(key).get<std::string>());
+    }
+
+    return theme;
 }
 
 // ===================== String / Random Utils =====================
