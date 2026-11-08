@@ -1,0 +1,5936 @@
+{
+  "end_date": "2026-11-08",
+  "packages": [
+    {
+      "category": "formula",
+      "description": "GitHub command-line tool",
+      "id": "brew:gh",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "gh"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "gh"
+        ]
+      },
+      "install_count": "289,321",
+      "latest": true,
+      "name": "Homebrew: gh",
+      "official_source": true,
+      "rank": 1,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.103.3"
+    },
+    {
+      "category": "formula",
+      "description": "Open-source, cross-platform JavaScript runtime environment",
+      "id": "brew:node",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "node"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "node"
+        ]
+      },
+      "install_count": "260,902",
+      "latest": true,
+      "name": "Homebrew: node",
+      "official_source": true,
+      "rank": 2,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "26.13.0"
+    },
+    {
+      "category": "formula",
+      "description": "Extremely fast Python package installer and resolver, written in Rust",
+      "id": "brew:uv",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "uv"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "uv"
+        ]
+      },
+      "install_count": "210,973",
+      "latest": true,
+      "name": "Homebrew: uv",
+      "official_source": true,
+      "rank": 3,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.13.7"
+    },
+    {
+      "category": "formula",
+      "description": "Official Amazon AWS command-line interface",
+      "id": "brew:awscli",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "awscli"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "awscli"
+        ]
+      },
+      "install_count": "158,402",
+      "latest": true,
+      "name": "Homebrew: awscli",
+      "official_source": true,
+      "rank": 4,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.39.6"
+    },
+    {
+      "category": "formula",
+      "description": "Play, record, convert, and stream select audio and video codecs",
+      "id": "brew:ffmpeg",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "ffmpeg"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "ffmpeg"
+        ]
+      },
+      "install_count": "137,144",
+      "latest": true,
+      "name": "Homebrew: ffmpeg",
+      "official_source": true,
+      "rank": 5,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "9.0.2"
+    },
+    {
+      "category": "formula",
+      "description": "Distributed revision control system",
+      "id": "brew:git",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "git"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "git"
+        ]
+      },
+      "install_count": "130,350",
+      "latest": true,
+      "name": "Homebrew: git",
+      "official_source": true,
+      "rank": 6,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.56.0"
+    },
+    {
+      "category": "formula",
+      "description": "Package compiler and linker metadata toolkit",
+      "id": "brew:pkgconf",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "pkgconf"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "pkgconf"
+        ]
+      },
+      "install_count": "126,860",
+      "latest": true,
+      "name": "Homebrew: pkgconf",
+      "official_source": true,
+      "rank": 7,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.0.10"
+    },
+    {
+      "category": "formula",
+      "description": "Execute binaries from Python packages in isolated environments",
+      "id": "brew:pipx",
+      "install": {
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "pipx"
+        ]
+      },
+      "install_count": "114,435",
+      "latest": true,
+      "name": "Homebrew: pipx",
+      "official_source": true,
+      "rank": 8,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.18.16"
+    },
+    {
+      "category": "formula",
+      "description": "Cross-platform make",
+      "id": "brew:cmake",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "cmake"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "cmake"
+        ]
+      },
+      "install_count": "107,268",
+      "latest": true,
+      "name": "Homebrew: cmake",
+      "official_source": true,
+      "rank": 9,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "4.4.5"
+    },
+    {
+      "category": "formula",
+      "description": "Open source programming language to build simple/reliable/efficient software",
+      "id": "brew:go",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "go"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "go"
+        ]
+      },
+      "install_count": "106,391",
+      "latest": true,
+      "name": "Homebrew: go",
+      "official_source": true,
+      "rank": 10,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.27.3"
+    },
+    {
+      "category": "formula",
+      "description": "Polyglot runtime manager (asdf rust clone)",
+      "id": "brew:mise",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "mise"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "mise"
+        ]
+      },
+      "install_count": "85,860",
+      "latest": true,
+      "name": "Homebrew: mise",
+      "official_source": true,
+      "rank": 11,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2026.11.4"
+    },
+    {
+      "category": "formula",
+      "description": "Interpreted, interactive, object-oriented programming language",
+      "id": "brew:python@3.14",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "python@3.14"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "python@3.14"
+        ]
+      },
+      "install_count": "69,474",
+      "latest": false,
+      "name": "Homebrew: python@3.14",
+      "official_source": true,
+      "rank": 12,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.14.10"
+    },
+    {
+      "category": "formula",
+      "description": "Deep clean and optimize your Mac",
+      "id": "brew:mole",
+      "install": {
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "mole"
+        ]
+      },
+      "install_count": "69,078",
+      "latest": true,
+      "name": "Homebrew: mole",
+      "official_source": true,
+      "rank": 13,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.70.0"
+    },
+    {
+      "category": "formula",
+      "description": "Pack, ship and run any application as a lightweight container",
+      "id": "brew:docker",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "docker"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "docker"
+        ]
+      },
+      "install_count": "66,327",
+      "latest": true,
+      "name": "Homebrew: docker",
+      "official_source": true,
+      "rank": 14,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "29.9.3"
+    },
+    {
+      "category": "formula",
+      "description": "Terminal multiplexer",
+      "id": "brew:tmux",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "tmux"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "tmux"
+        ]
+      },
+      "install_count": "64,483",
+      "latest": true,
+      "name": "Homebrew: tmux",
+      "official_source": true,
+      "rank": 15,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.8"
+    },
+    {
+      "category": "formula",
+      "description": "Feature-rich command-line audio/video downloader",
+      "id": "brew:yt-dlp",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "yt-dlp"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "yt-dlp"
+        ]
+      },
+      "install_count": "63,407",
+      "latest": true,
+      "name": "Homebrew: yt-dlp",
+      "official_source": true,
+      "rank": 16,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2026.10.26"
+    },
+    {
+      "category": "formula",
+      "description": "Create, run, and share large language models (LLMs)",
+      "id": "brew:ollama",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "ollama"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "ollama"
+        ]
+      },
+      "install_count": "62,036",
+      "latest": true,
+      "name": "Homebrew: ollama",
+      "official_source": true,
+      "rank": 17,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.40.15"
+    },
+    {
+      "category": "formula",
+      "description": "Tools and libraries to manipulate images in select formats",
+      "id": "brew:imagemagick",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "imagemagick"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "imagemagick"
+        ]
+      },
+      "install_count": "59,851",
+      "latest": true,
+      "name": "Homebrew: imagemagick",
+      "official_source": true,
+      "rank": 18,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "7.1.2-35"
+    },
+    {
+      "category": "formula",
+      "description": "Python version management",
+      "id": "brew:pyenv",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "pyenv"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "pyenv"
+        ]
+      },
+      "install_count": "58,678",
+      "latest": true,
+      "name": "Homebrew: pyenv",
+      "official_source": true,
+      "rank": 19,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.8.14"
+    },
+    {
+      "category": "formula",
+      "description": "Lightweight and flexible command-line JSON processor",
+      "id": "brew:jq",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "jq"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "jq"
+        ]
+      },
+      "install_count": "56,572",
+      "latest": true,
+      "name": "Homebrew: jq",
+      "official_source": true,
+      "rank": 20,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.8.2"
+    },
+    {
+      "category": "formula",
+      "description": "Interpreted, interactive, object-oriented programming language",
+      "id": "brew:python@3.12",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "python@3.12"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "python@3.12"
+        ]
+      },
+      "install_count": "55,097",
+      "latest": false,
+      "name": "Homebrew: python@3.12",
+      "official_source": true,
+      "rank": 21,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.12.16"
+    },
+    {
+      "category": "formula",
+      "description": "Command-line fuzzy finder written in Go",
+      "id": "brew:fzf",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "fzf"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "fzf"
+        ]
+      },
+      "install_count": "54,490",
+      "latest": true,
+      "name": "Homebrew: fzf",
+      "official_source": true,
+      "rank": 22,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.75.0"
+    },
+    {
+      "category": "formula",
+      "description": "GNU File, Shell, and Text utilities",
+      "id": "brew:coreutils",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "coreutils"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "coreutils"
+        ]
+      },
+      "install_count": "53,280",
+      "latest": true,
+      "name": "Homebrew: coreutils",
+      "official_source": true,
+      "rank": 23,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "9.12"
+    },
+    {
+      "category": "formula",
+      "description": "Port scanning utility for large networks",
+      "id": "brew:nmap",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "nmap"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "nmap"
+        ]
+      },
+      "install_count": "51,791",
+      "latest": true,
+      "name": "Homebrew: nmap",
+      "official_source": true,
+      "rank": 24,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "7.993"
+    },
+    {
+      "category": "formula",
+      "description": "Process YAML, JSON, XML, CSV and properties documents from the CLI",
+      "id": "brew:yq",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "yq"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "yq"
+        ]
+      },
+      "install_count": "49,840",
+      "latest": true,
+      "name": "Homebrew: yq",
+      "official_source": true,
+      "rank": 25,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "4.54.2"
+    },
+    {
+      "category": "formula",
+      "description": "PDF rendering library (based on the xpdf-3.0 code base)",
+      "id": "brew:poppler",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "poppler"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "poppler"
+        ]
+      },
+      "install_count": "49,631",
+      "latest": true,
+      "name": "Homebrew: poppler",
+      "official_source": true,
+      "rank": 26,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "26.11.0"
+    },
+    {
+      "category": "formula",
+      "description": "Open-source GitLab command-line tool",
+      "id": "brew:glab",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "glab"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "glab"
+        ]
+      },
+      "install_count": "48,927",
+      "latest": true,
+      "name": "Homebrew: glab",
+      "official_source": true,
+      "rank": 27,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.128.0"
+    },
+    {
+      "category": "formula",
+      "description": "Cloudflare Tunnel client (formerly Argo Tunnel)",
+      "id": "brew:cloudflared",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "cloudflared"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "cloudflared"
+        ]
+      },
+      "install_count": "48,061",
+      "latest": true,
+      "name": "Homebrew: cloudflared",
+      "official_source": true,
+      "rank": 28,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2026.10.7"
+    },
+    {
+      "category": "formula",
+      "description": "AI coding agent, built for the terminal",
+      "id": "brew:opencode",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "opencode"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "opencode"
+        ]
+      },
+      "install_count": "45,661",
+      "latest": true,
+      "name": "Homebrew: opencode",
+      "official_source": true,
+      "rank": 29,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.2.6"
+    },
+    {
+      "category": "formula",
+      "description": "General-purpose data compression with high compression ratio",
+      "id": "brew:xz",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "xz"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "xz"
+        ]
+      },
+      "install_count": "44,503",
+      "latest": true,
+      "name": "Homebrew: xz",
+      "official_source": true,
+      "rank": 30,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "5.8.4"
+    },
+    {
+      "category": "formula",
+      "description": "Ambitious Vim-fork focused on extensibility and agility",
+      "id": "brew:neovim",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "neovim"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "neovim"
+        ]
+      },
+      "install_count": "43,126",
+      "latest": true,
+      "name": "Homebrew: neovim",
+      "official_source": true,
+      "rank": 31,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.12.6"
+    },
+    {
+      "category": "formula",
+      "description": "Fast, disk space efficient package manager",
+      "id": "brew:pnpm",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "pnpm"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "pnpm"
+        ]
+      },
+      "install_count": "43,088",
+      "latest": true,
+      "name": "Homebrew: pnpm",
+      "official_source": true,
+      "rank": 32,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "12.18.0"
+    },
+    {
+      "category": "formula",
+      "description": "Interpreted, interactive, object-oriented programming language",
+      "id": "brew:python@3.13",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "python@3.13"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "python@3.13"
+        ]
+      },
+      "install_count": "42,416",
+      "latest": false,
+      "name": "Homebrew: python@3.13",
+      "official_source": true,
+      "rank": 33,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.13.18"
+    },
+    {
+      "category": "formula",
+      "description": "Kubernetes package manager",
+      "id": "brew:helm",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "helm"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "helm"
+        ]
+      },
+      "install_count": "41,149",
+      "latest": true,
+      "name": "Homebrew: helm",
+      "official_source": true,
+      "rank": 34,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "4.3.1"
+    },
+    {
+      "category": "formula",
+      "description": "Swiss-army knife of markup format conversion",
+      "id": "brew:pandoc",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "pandoc"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "pandoc"
+        ]
+      },
+      "install_count": "40,824",
+      "latest": true,
+      "name": "Homebrew: pandoc",
+      "official_source": true,
+      "rank": 35,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.13"
+    },
+    {
+      "category": "formula",
+      "description": "Little beautifier tool for xcodebuild",
+      "id": "brew:xcbeautify",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "xcbeautify"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "xcbeautify"
+        ]
+      },
+      "install_count": "40,484",
+      "latest": true,
+      "name": "Homebrew: xcbeautify",
+      "official_source": true,
+      "rank": 36,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.2.1"
+    },
+    {
+      "category": "formula",
+      "description": "Cryptography and SSL/TLS Toolkit",
+      "id": "brew:openssl@3",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "openssl@3"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "openssl@3"
+        ]
+      },
+      "install_count": "39,997",
+      "latest": false,
+      "name": "Homebrew: openssl@3",
+      "official_source": true,
+      "rank": 37,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.5.9"
+    },
+    {
+      "category": "formula",
+      "description": "GNU Privacy Guard (OpenPGP)",
+      "id": "brew:gnupg",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "gnupg"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "gnupg"
+        ]
+      },
+      "install_count": "38,760",
+      "latest": true,
+      "name": "Homebrew: gnupg",
+      "official_source": true,
+      "rank": 38,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.5.24"
+    },
+    {
+      "category": "formula",
+      "description": "Simple, fast and user-friendly alternative to find",
+      "id": "brew:fd",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "fd"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "fd"
+        ]
+      },
+      "install_count": "38,303",
+      "latest": true,
+      "name": "Homebrew: fd",
+      "official_source": true,
+      "rank": 39,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "10.5.2"
+    },
+    {
+      "category": "formula",
+      "description": "Git extension for versioning large files",
+      "id": "brew:git-lfs",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "git-lfs"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "git-lfs"
+        ]
+      },
+      "install_count": "37,451",
+      "latest": true,
+      "name": "Homebrew: git-lfs",
+      "official_source": true,
+      "rank": 40,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.8.1"
+    },
+    {
+      "category": "formula",
+      "description": "Object-file caching compiler wrapper",
+      "id": "brew:ccache",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "ccache"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "ccache"
+        ]
+      },
+      "install_count": "36,887",
+      "latest": true,
+      "name": "Homebrew: ccache",
+      "official_source": true,
+      "rank": 41,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "4.14.2"
+    },
+    {
+      "category": "formula",
+      "description": "Handy way to save and run project-specific commands",
+      "id": "brew:just",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "just"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "just"
+        ]
+      },
+      "install_count": "36,865",
+      "latest": true,
+      "name": "Homebrew: just",
+      "official_source": true,
+      "rank": 42,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.59.0"
+    },
+    {
+      "category": "formula",
+      "description": "Search tool like grep and The Silver Searcher",
+      "id": "brew:ripgrep",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "ripgrep"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "ripgrep"
+        ]
+      },
+      "install_count": "36,057",
+      "latest": true,
+      "name": "Homebrew: ripgrep",
+      "official_source": true,
+      "rank": 43,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "15.2.0"
+    },
+    {
+      "category": "formula",
+      "description": "Cross-shell prompt for astronauts",
+      "id": "brew:starship",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "starship"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "starship"
+        ]
+      },
+      "install_count": "35,484",
+      "latest": true,
+      "name": "Homebrew: starship",
+      "official_source": true,
+      "rank": 44,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.27.0"
+    },
+    {
+      "category": "formula",
+      "description": "Kubernetes command-line interface",
+      "id": "brew:kubernetes-cli",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "kubernetes-cli"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "kubernetes-cli"
+        ]
+      },
+      "install_count": "35,404",
+      "latest": true,
+      "name": "Homebrew: kubernetes-cli",
+      "official_source": true,
+      "rank": 45,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.37.2"
+    },
+    {
+      "category": "formula",
+      "description": "Interpreted, interactive, object-oriented programming language",
+      "id": "brew:python@3.11",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "python@3.11"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "python@3.11"
+        ]
+      },
+      "install_count": "34,999",
+      "latest": false,
+      "name": "Homebrew: python@3.11",
+      "official_source": true,
+      "rank": 46,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.11.18"
+    },
+    {
+      "category": "formula",
+      "description": "Next-gen compiler infrastructure",
+      "id": "brew:llvm",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "llvm"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "llvm"
+        ]
+      },
+      "install_count": "34,930",
+      "latest": true,
+      "name": "Homebrew: llvm",
+      "official_source": true,
+      "rank": 47,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "23.1.5"
+    },
+    {
+      "category": "formula",
+      "description": "Generate your Xcode project from a spec file and your folder structure",
+      "id": "brew:xcodegen",
+      "install": {
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "xcodegen"
+        ]
+      },
+      "install_count": "33,952",
+      "latest": true,
+      "name": "Homebrew: xcodegen",
+      "official_source": true,
+      "rank": 48,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.46.0"
+    },
+    {
+      "category": "formula",
+      "description": "Simple terminal UI for git commands",
+      "id": "brew:lazygit",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "lazygit"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "lazygit"
+        ]
+      },
+      "install_count": "33,546",
+      "latest": true,
+      "name": "Homebrew: lazygit",
+      "official_source": true,
+      "rank": 49,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.66.3"
+    },
+    {
+      "category": "formula",
+      "description": "Isolated development environments using Docker",
+      "id": "brew:docker-compose",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "docker-compose"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "docker-compose"
+        ]
+      },
+      "install_count": "32,845",
+      "latest": true,
+      "name": "Homebrew: docker-compose",
+      "official_source": true,
+      "rank": 50,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "5.7.0"
+    },
+    {
+      "category": "formula",
+      "description": "Postgres C API library",
+      "id": "brew:libpq",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "libpq"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "libpq"
+        ]
+      },
+      "install_count": "32,785",
+      "latest": true,
+      "name": "Homebrew: libpq",
+      "official_source": true,
+      "rank": 51,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "18.6"
+    },
+    {
+      "category": "formula",
+      "description": "Get a file from an HTTP, HTTPS or FTP server",
+      "id": "brew:curl",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "curl"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "curl"
+        ]
+      },
+      "install_count": "32,639",
+      "latest": true,
+      "name": "Homebrew: curl",
+      "official_source": true,
+      "rank": 52,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "8.23.0"
+    },
+    {
+      "category": "formula",
+      "description": "Internet file retriever",
+      "id": "brew:wget",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "wget"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "wget"
+        ]
+      },
+      "install_count": "32,579",
+      "latest": true,
+      "name": "Homebrew: wget",
+      "official_source": true,
+      "rank": 53,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.25.0"
+    },
+    {
+      "category": "formula",
+      "description": "Interpreted, interactive, object-oriented programming language",
+      "id": "brew:python@3.15",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "python@3.15"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "python@3.15"
+        ]
+      },
+      "install_count": "32,526",
+      "latest": false,
+      "name": "Homebrew: python@3.15",
+      "official_source": true,
+      "rank": 54,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.15.2"
+    },
+    {
+      "category": "formula",
+      "description": "Development kit for the Java programming language",
+      "id": "brew:openjdk@17",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "openjdk@17"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "openjdk@17"
+        ]
+      },
+      "install_count": "32,320",
+      "latest": false,
+      "name": "Homebrew: openjdk@17",
+      "official_source": true,
+      "rank": 55,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "17.0.21.0.3"
+    },
+    {
+      "category": "formula",
+      "description": "Safe, concurrent, practical language",
+      "id": "brew:rust",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "rust"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "rust"
+        ]
+      },
+      "install_count": "32,064",
+      "latest": true,
+      "name": "Homebrew: rust",
+      "official_source": true,
+      "rank": 56,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.99.1"
+    },
+    {
+      "category": "formula",
+      "description": "Static analysis and lint tool, for (ba)sh scripts",
+      "id": "brew:shellcheck",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "shellcheck"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "shellcheck"
+        ]
+      },
+      "install_count": "31,090",
+      "latest": true,
+      "name": "Homebrew: shellcheck",
+      "official_source": true,
+      "rank": 57,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.11.0"
+    },
+    {
+      "category": "formula",
+      "description": "FAST Kubernetes manifests validator, with support for Custom Resources!",
+      "id": "brew:kubeconform",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "kubeconform"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "kubeconform"
+        ]
+      },
+      "install_count": "30,935",
+      "latest": true,
+      "name": "Homebrew: kubeconform",
+      "official_source": true,
+      "rank": 58,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.8.0"
+    },
+    {
+      "category": "formula",
+      "description": "Development kit for the Java programming language",
+      "id": "brew:openjdk@21",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "openjdk@21"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "openjdk@21"
+        ]
+      },
+      "install_count": "30,808",
+      "latest": false,
+      "name": "Homebrew: openjdk@21",
+      "official_source": true,
+      "rank": 59,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "21.0.13.0.3"
+    },
+    {
+      "category": "formula",
+      "description": "Bourne-Again SHell, a UNIX command interpreter",
+      "id": "brew:bash",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "bash"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "bash"
+        ]
+      },
+      "install_count": "30,752",
+      "latest": true,
+      "name": "Homebrew: bash",
+      "official_source": true,
+      "rank": 60,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "5.3.20"
+    },
+    {
+      "category": "formula",
+      "description": "Small build system for use with gyp or CMake",
+      "id": "brew:ninja",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "ninja"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "ninja"
+        ]
+      },
+      "install_count": "29,674",
+      "latest": true,
+      "name": "Homebrew: ninja",
+      "official_source": true,
+      "rank": 61,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.13.2"
+    },
+    {
+      "category": "formula",
+      "description": "Development kit for the Java programming language",
+      "id": "brew:openjdk",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "openjdk"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "openjdk"
+        ]
+      },
+      "install_count": "28,795",
+      "latest": true,
+      "name": "Homebrew: openjdk",
+      "official_source": true,
+      "rank": 62,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "27.0.1.0.3"
+    },
+    {
+      "category": "formula",
+      "description": "UNIX shell (command interpreter)",
+      "id": "brew:zsh",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "zsh"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "zsh"
+        ]
+      },
+      "install_count": "28,017",
+      "latest": true,
+      "name": "Homebrew: zsh",
+      "official_source": true,
+      "rank": 63,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "5.9.2"
+    },
+    {
+      "category": "formula",
+      "description": "Persistent key-value database, with built-in net interface",
+      "id": "brew:redis",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "redis"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "redis"
+        ]
+      },
+      "install_count": "27,215",
+      "latest": true,
+      "name": "Homebrew: redis",
+      "official_source": true,
+      "rank": 64,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "8.10.3"
+    },
+    {
+      "category": "formula",
+      "description": "Dependency manager for Cocoa projects",
+      "id": "brew:cocoapods",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "cocoapods"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "cocoapods"
+        ]
+      },
+      "install_count": "27,149",
+      "latest": true,
+      "name": "Homebrew: cocoapods",
+      "official_source": true,
+      "rank": 65,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.17.0"
+    },
+    {
+      "category": "formula",
+      "description": "Manage multiple Node.js versions",
+      "id": "brew:nvm",
+      "install": {
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "nvm"
+        ]
+      },
+      "install_count": "27,073",
+      "latest": true,
+      "name": "Homebrew: nvm",
+      "official_source": true,
+      "rank": 66,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.41.0"
+    },
+    {
+      "category": "formula",
+      "description": "OpenType text shaping engine",
+      "id": "brew:harfbuzz",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "harfbuzz"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "harfbuzz"
+        ]
+      },
+      "install_count": "26,930",
+      "latest": true,
+      "name": "Homebrew: harfbuzz",
+      "official_source": true,
+      "rank": 67,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "15.1.0"
+    },
+    {
+      "category": "formula",
+      "description": "OCR (Optical Character Recognition) engine",
+      "id": "brew:tesseract",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "tesseract"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "tesseract"
+        ]
+      },
+      "install_count": "26,882",
+      "latest": true,
+      "name": "Homebrew: tesseract",
+      "official_source": true,
+      "rank": 68,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "5.5.4"
+    },
+    {
+      "category": "formula",
+      "description": "GNU version of the tar archiving utility",
+      "id": "brew:gnu-tar",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "gnu-tar"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "gnu-tar"
+        ]
+      },
+      "install_count": "26,842",
+      "latest": true,
+      "name": "Homebrew: gnu-tar",
+      "official_source": true,
+      "rank": 69,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.35"
+    },
+    {
+      "category": "formula",
+      "description": "General-purpose scripting language",
+      "id": "brew:php",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "php"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "php"
+        ]
+      },
+      "install_count": "26,636",
+      "latest": true,
+      "name": "Homebrew: php",
+      "official_source": true,
+      "rank": 70,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "8.5.12"
+    },
+    {
+      "category": "formula",
+      "description": "Improved shell history for zsh, bash, fish and nushell",
+      "id": "brew:atuin",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "atuin"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "atuin"
+        ]
+      },
+      "install_count": "26,509",
+      "latest": true,
+      "name": "Homebrew: atuin",
+      "official_source": true,
+      "rank": 71,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "18.24.5"
+    },
+    {
+      "category": "formula",
+      "description": "Open-source, cross-platform JavaScript runtime environment",
+      "id": "brew:node@24",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "node@24"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "node@24"
+        ]
+      },
+      "install_count": "26,432",
+      "latest": false,
+      "name": "Homebrew: node@24",
+      "official_source": true,
+      "rank": 72,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "24.22.2"
+    },
+    {
+      "category": "formula",
+      "description": "Static checker for GitHub Actions workflow files",
+      "id": "brew:actionlint",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "actionlint"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "actionlint"
+        ]
+      },
+      "install_count": "26,409",
+      "latest": true,
+      "name": "Homebrew: actionlint",
+      "official_source": true,
+      "rank": 73,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.7.12"
+    },
+    {
+      "category": "formula",
+      "description": "Load/unload environment variables based on $PWD",
+      "id": "brew:direnv",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "direnv"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "direnv"
+        ]
+      },
+      "install_count": "25,731",
+      "latest": true,
+      "name": "Homebrew: direnv",
+      "official_source": true,
+      "rank": 74,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.38.2"
+    },
+    {
+      "category": "formula",
+      "description": "Open-source, cross-platform JavaScript runtime environment",
+      "id": "brew:node@22",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "node@22"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "node@22"
+        ]
+      },
+      "install_count": "25,350",
+      "latest": false,
+      "name": "Homebrew: node@22",
+      "official_source": true,
+      "rank": 75,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "22.23.4"
+    },
+    {
+      "category": "formula",
+      "description": "Powerful, clean, object-oriented scripting language",
+      "id": "brew:ruby",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "ruby"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "ruby"
+        ]
+      },
+      "install_count": "24,814",
+      "latest": true,
+      "name": "Homebrew: ruby",
+      "official_source": true,
+      "rank": 76,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "4.0.9"
+    },
+    {
+      "category": "formula",
+      "description": "Rsync for cloud storage",
+      "id": "brew:rclone",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "rclone"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "rclone"
+        ]
+      },
+      "install_count": "23,683",
+      "latest": true,
+      "name": "Homebrew: rclone",
+      "official_source": true,
+      "rank": 77,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.76.0"
+    },
+    {
+      "category": "formula",
+      "description": "Automate deployment, configuration, and upgrading",
+      "id": "brew:ansible",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "ansible"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "ansible"
+        ]
+      },
+      "install_count": "23,460",
+      "latest": true,
+      "name": "Homebrew: ansible",
+      "official_source": true,
+      "rank": 78,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "14.6.0"
+    },
+    {
+      "category": "formula",
+      "description": "Agent multiplexer that lives in your terminal",
+      "id": "brew:herdr",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "herdr"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "herdr"
+        ]
+      },
+      "install_count": "22,344",
+      "latest": true,
+      "name": "Homebrew: herdr",
+      "official_source": true,
+      "rank": 79,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.9.5"
+    },
+    {
+      "category": "formula",
+      "description": "7-Zip is a file archiver with a high compression ratio",
+      "id": "brew:sevenzip",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "sevenzip"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "sevenzip"
+        ]
+      },
+      "install_count": "22,256",
+      "latest": true,
+      "name": "Homebrew: sevenzip",
+      "official_source": true,
+      "rank": 80,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "26.06"
+    },
+    {
+      "category": "formula",
+      "description": "Command-line shell and scripting language",
+      "id": "brew:powershell",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "powershell"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "powershell"
+        ]
+      },
+      "install_count": "22,233",
+      "latest": true,
+      "name": "Homebrew: powershell",
+      "official_source": true,
+      "rank": 81,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "7.6.9"
+    },
+    {
+      "category": "formula",
+      "description": "Rust toolchain installer",
+      "id": "brew:rustup",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "rustup"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "rustup"
+        ]
+      },
+      "install_count": "22,227",
+      "latest": true,
+      "name": "Homebrew: rustup",
+      "official_source": true,
+      "rank": 82,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.29.3"
+    },
+    {
+      "category": "formula",
+      "description": "Library to render SVG files using Cairo",
+      "id": "brew:librsvg",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "librsvg"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "librsvg"
+        ]
+      },
+      "install_count": "21,653",
+      "latest": true,
+      "name": "Homebrew: librsvg",
+      "official_source": true,
+      "rank": 83,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.63.4"
+    },
+    {
+      "category": "formula",
+      "description": "Manage your dotfiles across multiple diverse machines, securely",
+      "id": "brew:chezmoi",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "chezmoi"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "chezmoi"
+        ]
+      },
+      "install_count": "21,651",
+      "latest": true,
+      "name": "Homebrew: chezmoi",
+      "official_source": true,
+      "rank": 84,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.74.0"
+    },
+    {
+      "category": "formula",
+      "description": "Download with resuming and segmented downloading",
+      "id": "brew:aria2",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "aria2"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "aria2"
+        ]
+      },
+      "install_count": "21,019",
+      "latest": true,
+      "name": "Homebrew: aria2",
+      "official_source": true,
+      "rank": 85,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.37.0"
+    },
+    {
+      "category": "formula",
+      "description": "Program providing model for GNU coding standards and practices",
+      "id": "brew:hello",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "hello"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "hello"
+        ]
+      },
+      "install_count": "20,973",
+      "latest": true,
+      "name": "Homebrew: hello",
+      "official_source": true,
+      "rank": 86,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.12.3"
+    },
+    {
+      "category": "formula",
+      "description": "Resource monitor. C++ version and continuation of bashtop and bpytop",
+      "id": "brew:btop",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "btop"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "btop"
+        ]
+      },
+      "install_count": "20,552",
+      "latest": true,
+      "name": "Homebrew: btop",
+      "official_source": true,
+      "rank": 87,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.4.8"
+    },
+    {
+      "category": "formula",
+      "description": "Graph visualization software from AT&T and Bell Labs",
+      "id": "brew:graphviz",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "graphviz"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "graphviz"
+        ]
+      },
+      "install_count": "20,440",
+      "latest": true,
+      "name": "Homebrew: graphviz",
+      "official_source": true,
+      "rank": 88,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "16.1.0"
+    },
+    {
+      "category": "formula",
+      "description": "Vi 'workalike' with many additional features",
+      "id": "brew:vim",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "vim"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "vim"
+        ]
+      },
+      "install_count": "20,318",
+      "latest": true,
+      "name": "Homebrew: vim",
+      "official_source": true,
+      "rank": 89,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "9.2.1302"
+    },
+    {
+      "category": "formula",
+      "description": "CLI proxy to minimize LLM token consumption",
+      "id": "brew:rtk",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "rtk"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "rtk"
+        ]
+      },
+      "install_count": "20,214",
+      "latest": true,
+      "name": "Homebrew: rtk",
+      "official_source": true,
+      "rank": 90,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.2.0"
+    },
+    {
+      "category": "formula",
+      "description": "LLM inference in C/C++",
+      "id": "brew:llama.cpp",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "llama.cpp"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "llama.cpp"
+        ]
+      },
+      "install_count": "20,181",
+      "latest": true,
+      "name": "Homebrew: llama.cpp",
+      "official_source": true,
+      "rank": 91,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.9.0"
+    },
+    {
+      "category": "formula",
+      "description": "Generic machine emulator and virtualizer",
+      "id": "brew:qemu",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "qemu"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "qemu"
+        ]
+      },
+      "install_count": "19,433",
+      "latest": true,
+      "name": "Homebrew: qemu",
+      "official_source": true,
+      "rank": 92,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "11.1.3"
+    },
+    {
+      "category": "formula",
+      "description": "Audit git repos for secrets",
+      "id": "brew:gitleaks",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "gitleaks"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "gitleaks"
+        ]
+      },
+      "install_count": "19,189",
+      "latest": true,
+      "name": "Homebrew: gitleaks",
+      "official_source": true,
+      "rank": 93,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "8.30.1"
+    },
+    {
+      "category": "formula",
+      "description": "Port of OpenAI's Whisper model in C/C++",
+      "id": "brew:whisper.cpp",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "whisper.cpp"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "whisper.cpp"
+        ]
+      },
+      "install_count": "18,876",
+      "latest": true,
+      "name": "Homebrew: whisper.cpp",
+      "official_source": true,
+      "rank": 94,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.9.5"
+    },
+    {
+      "category": "formula",
+      "description": "Core application library for C",
+      "id": "brew:glib",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "glib"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "glib"
+        ]
+      },
+      "install_count": "18,863",
+      "latest": true,
+      "name": "Homebrew: glib",
+      "official_source": true,
+      "rank": 95,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.90.1"
+    },
+    {
+      "category": "formula",
+      "description": "GNU compiler collection",
+      "id": "brew:gcc",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "gcc"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "gcc"
+        ]
+      },
+      "install_count": "18,573",
+      "latest": true,
+      "name": "Homebrew: gcc",
+      "official_source": true,
+      "rank": 96,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "16.2.0"
+    },
+    {
+      "category": "formula",
+      "description": "Bash Automated Testing System",
+      "id": "brew:bats-core",
+      "install": {
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "bats-core"
+        ]
+      },
+      "install_count": "18,391",
+      "latest": true,
+      "name": "Homebrew: bats-core",
+      "official_source": true,
+      "rank": 97,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.14.0"
+    },
+    {
+      "category": "formula",
+      "description": "Interpreted, interactive, object-oriented programming language",
+      "id": "brew:python@3.10",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "python@3.10"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "python@3.10"
+        ]
+      },
+      "install_count": "18,290",
+      "latest": false,
+      "name": "Homebrew: python@3.10",
+      "official_source": true,
+      "rank": 98,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.10.22"
+    },
+    {
+      "category": "formula",
+      "description": "Clone of cat(1) with syntax highlighting and Git integration",
+      "id": "brew:bat",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "bat"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "bat"
+        ]
+      },
+      "install_count": "18,099",
+      "latest": true,
+      "name": "Homebrew: bat",
+      "official_source": true,
+      "rank": 99,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.26.1"
+    },
+    {
+      "category": "formula",
+      "description": "Tool to enforce Swift style and conventions",
+      "id": "brew:swiftlint",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "swiftlint"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "swiftlint"
+        ]
+      },
+      "install_count": "17,918",
+      "latest": true,
+      "name": "Homebrew: swiftlint",
+      "official_source": true,
+      "rank": 100,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.65.1"
+    },
+    {
+      "category": "formula",
+      "description": "Object-relational database system",
+      "id": "brew:postgresql@18",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "postgresql@18"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "postgresql@18"
+        ]
+      },
+      "install_count": "17,787",
+      "latest": false,
+      "name": "Homebrew: postgresql@18",
+      "official_source": true,
+      "rank": 101,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "18.6"
+    },
+    {
+      "category": "formula",
+      "description": "Easiest, most secure way to use WireGuard and 2FA",
+      "id": "brew:tailscale",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "tailscale"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "tailscale"
+        ]
+      },
+      "install_count": "17,356",
+      "latest": true,
+      "name": "Homebrew: tailscale",
+      "official_source": true,
+      "rank": 102,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.104.5"
+    },
+    {
+      "category": "formula",
+      "description": "Interact with Google Gemini AI models from the command-line",
+      "id": "brew:gemini-cli",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "gemini-cli"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "gemini-cli"
+        ]
+      },
+      "install_count": "17,325",
+      "latest": false,
+      "name": "Homebrew: gemini-cli",
+      "official_source": true,
+      "rank": 103,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.67.0"
+    },
+    {
+      "category": "formula",
+      "description": "Container runtimes on MacOS (and Linux) with minimal setup",
+      "id": "brew:colima",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "colima"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "colima"
+        ]
+      },
+      "install_count": "17,126",
+      "latest": true,
+      "name": "Homebrew: colima",
+      "official_source": true,
+      "rank": 104,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.10.3"
+    },
+    {
+      "category": "formula",
+      "description": "Framework for managing multi-language pre-commit hooks",
+      "id": "brew:pre-commit",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "pre-commit"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "pre-commit"
+        ]
+      },
+      "install_count": "17,091",
+      "latest": true,
+      "name": "Homebrew: pre-commit",
+      "official_source": true,
+      "rank": 105,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "4.7.0"
+    },
+    {
+      "category": "formula",
+      "description": "Object-relational database system",
+      "id": "brew:postgresql@17",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "postgresql@17"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "postgresql@17"
+        ]
+      },
+      "install_count": "16,914",
+      "latest": false,
+      "name": "Homebrew: postgresql@17",
+      "official_source": true,
+      "rank": 106,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "17.11"
+    },
+    {
+      "category": "formula",
+      "description": "Mozilla CA certificate store",
+      "id": "brew:ca-certificates",
+      "install": {
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "ca-certificates"
+        ]
+      },
+      "install_count": "16,859",
+      "latest": true,
+      "name": "Homebrew: ca-certificates",
+      "official_source": true,
+      "rank": 107,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2026-11-05"
+    },
+    {
+      "category": "formula",
+      "description": "Template-free customization of Kubernetes YAML manifests",
+      "id": "brew:kustomize",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "kustomize"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "kustomize"
+        ]
+      },
+      "install_count": "16,806",
+      "latest": true,
+      "name": "Homebrew: kustomize",
+      "official_source": true,
+      "rank": 108,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "5.8.3"
+    },
+    {
+      "category": "formula",
+      "description": "Java-based project management",
+      "id": "brew:maven",
+      "install": {
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "maven"
+        ]
+      },
+      "install_count": "16,770",
+      "latest": true,
+      "name": "Homebrew: maven",
+      "official_source": true,
+      "rank": 109,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.10.0"
+    },
+    {
+      "category": "formula",
+      "description": "Command-line tools for fly.io services",
+      "id": "brew:flyctl",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "flyctl"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "flyctl"
+        ]
+      },
+      "install_count": "16,769",
+      "latest": true,
+      "name": "Homebrew: flyctl",
+      "official_source": true,
+      "rank": 110,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.5.5"
+    },
+    {
+      "category": "formula",
+      "description": "Utility that provides fast incremental file transfer",
+      "id": "brew:rsync",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "rsync"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "rsync"
+        ]
+      },
+      "install_count": "16,567",
+      "latest": true,
+      "name": "Homebrew: rsync",
+      "official_source": true,
+      "rank": 111,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.5.2"
+    },
+    {
+      "category": "formula",
+      "description": "Docker CLI plugin for extended build capabilities with BuildKit",
+      "id": "brew:docker-buildx",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "docker-buildx"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "docker-buildx"
+        ]
+      },
+      "install_count": "16,202",
+      "latest": true,
+      "name": "Homebrew: docker-buildx",
+      "official_source": true,
+      "rank": 112,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.38.2"
+    },
+    {
+      "category": "formula",
+      "description": "LLVM's OpenMP runtime library",
+      "id": "brew:libomp",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "libomp"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "libomp"
+        ]
+      },
+      "install_count": "16,181",
+      "latest": true,
+      "name": "Homebrew: libomp",
+      "official_source": true,
+      "rank": 113,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "23.1.5"
+    },
+    {
+      "category": "formula",
+      "description": "Tool to parse the SLF serialization format used by Xcode",
+      "id": "brew:xclogparser",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "xclogparser"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "xclogparser"
+        ]
+      },
+      "install_count": "16,015",
+      "latest": true,
+      "name": "Homebrew: xclogparser",
+      "official_source": true,
+      "rank": 114,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.2.50"
+    },
+    {
+      "category": "formula",
+      "description": "Open source relational database management system",
+      "id": "brew:mysql",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "mysql"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "mysql"
+        ]
+      },
+      "install_count": "15,883",
+      "latest": true,
+      "name": "Homebrew: mysql",
+      "official_source": true,
+      "rank": 115,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "26.10.0"
+    },
+    {
+      "category": "formula",
+      "description": "Like neofetch, but much faster because written mostly in C",
+      "id": "brew:fastfetch",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "fastfetch"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "fastfetch"
+        ]
+      },
+      "install_count": "15,771",
+      "latest": true,
+      "name": "Homebrew: fastfetch",
+      "official_source": true,
+      "rank": 116,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.71.0"
+    },
+    {
+      "category": "formula",
+      "description": "OCI Registry As Storage",
+      "id": "brew:oras",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "oras"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "oras"
+        ]
+      },
+      "install_count": "15,739",
+      "latest": true,
+      "name": "Homebrew: oras",
+      "official_source": true,
+      "rank": 117,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.3.6"
+    },
+    {
+      "category": "formula",
+      "description": "Modern, maintained replacement for ls",
+      "id": "brew:eza",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "eza"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "eza"
+        ]
+      },
+      "install_count": "15,691",
+      "latest": true,
+      "name": "Homebrew: eza",
+      "official_source": true,
+      "rank": 118,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.23.5"
+    },
+    {
+      "category": "formula",
+      "description": "Vulnerability scanner for container images, file systems, and Git repos",
+      "id": "brew:trivy",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "trivy"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "trivy"
+        ]
+      },
+      "install_count": "15,601",
+      "latest": true,
+      "name": "Homebrew: trivy",
+      "official_source": true,
+      "rank": 119,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.76.2"
+    },
+    {
+      "category": "formula",
+      "description": "Open-source build automation tool based on the Groovy and Kotlin DSL",
+      "id": "brew:gradle",
+      "install": {
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "gradle"
+        ]
+      },
+      "install_count": "15,567",
+      "latest": true,
+      "name": "Homebrew: gradle",
+      "official_source": true,
+      "rank": 120,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "9.8.2"
+    },
+    {
+      "category": "formula",
+      "description": "Watch files and take action when they change",
+      "id": "brew:watchman",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "watchman"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "watchman"
+        ]
+      },
+      "install_count": "15,419",
+      "latest": true,
+      "name": "Homebrew: watchman",
+      "official_source": true,
+      "rank": 121,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2026.10.26.00"
+    },
+    {
+      "category": "formula",
+      "description": "Fast linters runner for Go",
+      "id": "brew:golangci-lint",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "golangci-lint"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "golangci-lint"
+        ]
+      },
+      "install_count": "15,096",
+      "latest": true,
+      "name": "Homebrew: golangci-lint",
+      "official_source": true,
+      "rank": 122,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.15.0"
+    },
+    {
+      "category": "formula",
+      "description": "Shell extension to navigate your filesystem faster",
+      "id": "brew:zoxide",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "zoxide"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "zoxide"
+        ]
+      },
+      "install_count": "15,085",
+      "latest": true,
+      "name": "Homebrew: zoxide",
+      "official_source": true,
+      "rank": 123,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.10.0"
+    },
+    {
+      "category": "formula",
+      "description": "Tool for generating GNU Standards-compliant Makefiles",
+      "id": "brew:automake",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "automake"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "automake"
+        ]
+      },
+      "install_count": "15,018",
+      "latest": true,
+      "name": "Homebrew: automake",
+      "official_source": true,
+      "rank": 124,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.20"
+    },
+    {
+      "category": "formula",
+      "description": ".NET Core",
+      "id": "brew:dotnet",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "dotnet"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "dotnet"
+        ]
+      },
+      "install_count": "14,989",
+      "latest": true,
+      "name": "Homebrew: dotnet",
+      "official_source": true,
+      "rank": 125,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "10.0.403"
+    },
+    {
+      "category": "formula",
+      "description": "Display directories as trees (with optional color/HTML output)",
+      "id": "brew:tree",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "tree"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "tree"
+        ]
+      },
+      "install_count": "14,902",
+      "latest": true,
+      "name": "Homebrew: tree",
+      "official_source": true,
+      "rank": 126,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.3.2"
+    },
+    {
+      "category": "formula",
+      "description": "Domain specific configuration language for defining JSON data",
+      "id": "brew:jsonnet",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "jsonnet"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "jsonnet"
+        ]
+      },
+      "install_count": "14,843",
+      "latest": true,
+      "name": "Homebrew: jsonnet",
+      "official_source": true,
+      "rank": 127,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.22.0"
+    },
+    {
+      "category": "formula",
+      "description": "Simple tool to make locally trusted development certificates",
+      "id": "brew:mkcert",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "mkcert"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "mkcert"
+        ]
+      },
+      "install_count": "14,797",
+      "latest": true,
+      "name": "Homebrew: mkcert",
+      "official_source": true,
+      "rank": 128,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.4.4"
+    },
+    {
+      "category": "formula",
+      "description": "Cryptography and SSL/TLS Toolkit",
+      "id": "brew:openssl@4",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "openssl@4"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "openssl@4"
+        ]
+      },
+      "install_count": "14,589",
+      "latest": false,
+      "name": "Homebrew: openssl@4",
+      "official_source": true,
+      "rank": 129,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "4.1.0"
+    },
+    {
+      "category": "formula",
+      "description": "Extremely fast Python linter, written in Rust",
+      "id": "brew:ruff",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "ruff"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "ruff"
+        ]
+      },
+      "install_count": "14,506",
+      "latest": true,
+      "name": "Homebrew: ruff",
+      "official_source": true,
+      "rank": 130,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.17.4"
+    },
+    {
+      "category": "formula",
+      "description": "GitOps Continuous Delivery for Kubernetes",
+      "id": "brew:argocd",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "argocd"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "argocd"
+        ]
+      },
+      "install_count": "14,462",
+      "latest": true,
+      "name": "Homebrew: argocd",
+      "official_source": true,
+      "rank": 131,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.6.1"
+    },
+    {
+      "category": "formula",
+      "description": "Protocol buffers (Google's data interchange format)",
+      "id": "brew:protobuf",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "protobuf"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "protobuf"
+        ]
+      },
+      "install_count": "13,941",
+      "latest": true,
+      "name": "Homebrew: protobuf",
+      "official_source": true,
+      "rank": 132,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "36.2"
+    },
+    {
+      "category": "formula",
+      "description": "Object-relational database system",
+      "id": "brew:postgresql@16",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "postgresql@16"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "postgresql@16"
+        ]
+      },
+      "install_count": "13,686",
+      "latest": false,
+      "name": "Homebrew: postgresql@16",
+      "official_source": true,
+      "rank": 133,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "16.15"
+    },
+    {
+      "category": "formula",
+      "description": "Interpreter for PostScript and PDF",
+      "id": "brew:ghostscript",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "ghostscript"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "ghostscript"
+        ]
+      },
+      "install_count": "13,685",
+      "latest": true,
+      "name": "Homebrew: ghostscript",
+      "official_source": true,
+      "rank": 134,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "10.08.0"
+    },
+    {
+      "category": "formula",
+      "description": "Code searching, linting, rewriting",
+      "id": "brew:ast-grep",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "ast-grep"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "ast-grep"
+        ]
+      },
+      "install_count": "13,587",
+      "latest": true,
+      "name": "Homebrew: ast-grep",
+      "official_source": true,
+      "rank": 135,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.51.1"
+    },
+    {
+      "category": "formula",
+      "description": "Drop-in replacement for Terraform. Infrastructure as Code Tool",
+      "id": "brew:opentofu",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "opentofu"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "opentofu"
+        ]
+      },
+      "install_count": "13,437",
+      "latest": true,
+      "name": "Homebrew: opentofu",
+      "official_source": true,
+      "rank": 136,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.13.9"
+    },
+    {
+      "category": "formula",
+      "description": "Powerful, lightweight programming language",
+      "id": "brew:lua",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "lua"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "lua"
+        ]
+      },
+      "install_count": "13,403",
+      "latest": true,
+      "name": "Homebrew: lua",
+      "official_source": true,
+      "rank": 137,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "5.5.1"
+    },
+    {
+      "category": "formula",
+      "description": "Codec library for encoding and decoding AV1 video streams",
+      "id": "brew:aom",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "aom"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "aom"
+        ]
+      },
+      "install_count": "13,240",
+      "latest": true,
+      "name": "Homebrew: aom",
+      "official_source": true,
+      "rank": 138,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.15.3"
+    },
+    {
+      "category": "formula",
+      "description": "Python dependency management tool",
+      "id": "brew:pipenv",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "pipenv"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "pipenv"
+        ]
+      },
+      "install_count": "13,028",
+      "latest": true,
+      "name": "Homebrew: pipenv",
+      "official_source": true,
+      "rank": 139,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2026.10.6"
+    },
+    {
+      "category": "formula",
+      "description": "Syntax-highlighting pager for git and diff output",
+      "id": "brew:git-delta",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "git-delta"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "git-delta"
+        ]
+      },
+      "install_count": "12,936",
+      "latest": true,
+      "name": "Homebrew: git-delta",
+      "official_source": true,
+      "rank": 140,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.20.1"
+    },
+    {
+      "category": "formula",
+      "description": "Formatting tool for reformatting Swift code",
+      "id": "brew:swiftformat",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "swiftformat"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "swiftformat"
+        ]
+      },
+      "install_count": "12,515",
+      "latest": true,
+      "name": "Homebrew: swiftformat",
+      "official_source": true,
+      "rank": 141,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.64.6"
+    },
+    {
+      "category": "formula",
+      "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager",
+      "id": "brew:bun",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "bun"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "bun"
+        ]
+      },
+      "install_count": "12,348",
+      "latest": true,
+      "name": "Homebrew: bun",
+      "official_source": true,
+      "rank": 142,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.4.4"
+    },
+    {
+      "category": "formula",
+      "description": "Validating, recursive, caching DNS resolver",
+      "id": "brew:unbound",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "unbound"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "unbound"
+        ]
+      },
+      "install_count": "12,232",
+      "latest": true,
+      "name": "Homebrew: unbound",
+      "official_source": true,
+      "rank": 143,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.26.2"
+    },
+    {
+      "category": "formula",
+      "description": "Improved top (interactive process viewer)",
+      "id": "brew:htop",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "htop"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "htop"
+        ]
+      },
+      "install_count": "12,060",
+      "latest": true,
+      "name": "Homebrew: htop",
+      "official_source": true,
+      "rank": 144,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.5.3"
+    },
+    {
+      "category": "formula",
+      "description": "Vector graphics library with cross-device output support",
+      "id": "brew:cairo",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "cairo"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "cairo"
+        ]
+      },
+      "install_count": "11,926",
+      "latest": true,
+      "name": "Homebrew: cairo",
+      "official_source": true,
+      "rank": 145,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.18.6"
+    },
+    {
+      "category": "formula",
+      "description": "Kubernetes CLI To Manage Your Clusters In Style!",
+      "id": "brew:k9s",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "k9s"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "k9s"
+        ]
+      },
+      "install_count": "11,875",
+      "latest": true,
+      "name": "Homebrew: k9s",
+      "official_source": true,
+      "rank": 146,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.51.0"
+    },
+    {
+      "category": "formula",
+      "description": "Generate introspection data for GObject libraries",
+      "id": "brew:gobject-introspection",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "gobject-introspection"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "gobject-introspection"
+        ]
+      },
+      "install_count": "11,852",
+      "latest": true,
+      "name": "Homebrew: gobject-introspection",
+      "official_source": true,
+      "rank": 147,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.86.0"
+    },
+    {
+      "category": "formula",
+      "description": "Open source relational database management system",
+      "id": "brew:mysql-client",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "mysql-client"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "mysql-client"
+        ]
+      },
+      "install_count": "11,846",
+      "latest": true,
+      "name": "Homebrew: mysql-client",
+      "official_source": true,
+      "rank": 148,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "26.10.0"
+    },
+    {
+      "category": "formula",
+      "description": "Dependency Manager for PHP",
+      "id": "brew:composer",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "composer"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "composer"
+        ]
+      },
+      "install_count": "11,817",
+      "latest": true,
+      "name": "Homebrew: composer",
+      "official_source": true,
+      "rank": 149,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.11.1"
+    },
+    {
+      "category": "formula",
+      "description": "Command-line interface for SQLite",
+      "id": "brew:sqlite",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "sqlite"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "sqlite"
+        ]
+      },
+      "install_count": "11,786",
+      "latest": true,
+      "name": "Homebrew: sqlite",
+      "official_source": true,
+      "rank": 150,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.54.1"
+    },
+    {
+      "category": "formula",
+      "description": "Autoformat shell script source code",
+      "id": "brew:shfmt",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "shfmt"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "shfmt"
+        ]
+      },
+      "install_count": "11,584",
+      "latest": true,
+      "name": "Homebrew: shfmt",
+      "official_source": true,
+      "rank": 151,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.14.1"
+    },
+    {
+      "category": "formula",
+      "description": "Configurable static site generator",
+      "id": "brew:hugo",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "hugo"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "hugo"
+        ]
+      },
+      "install_count": "11,398",
+      "latest": true,
+      "name": "Homebrew: hugo",
+      "official_source": true,
+      "rank": 152,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.169.0"
+    },
+    {
+      "category": "formula",
+      "description": "Object-relational database system",
+      "id": "brew:postgresql@14",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "postgresql@14"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "postgresql@14"
+        ]
+      },
+      "install_count": "11,298",
+      "latest": false,
+      "name": "Homebrew: postgresql@14",
+      "official_source": true,
+      "rank": 153,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "14.24"
+    },
+    {
+      "category": "formula",
+      "description": "Library to communicate with iOS devices natively",
+      "id": "brew:libimobiledevice",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "libimobiledevice"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "libimobiledevice"
+        ]
+      },
+      "install_count": "11,150",
+      "latest": true,
+      "name": "Homebrew: libimobiledevice",
+      "official_source": true,
+      "rank": 154,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.4.0"
+    },
+    {
+      "category": "formula",
+      "description": "Simple, modern, secure file encryption",
+      "id": "brew:age",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "age"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "age"
+        ]
+      },
+      "install_count": "11,143",
+      "latest": true,
+      "name": "Homebrew: age",
+      "official_source": true,
+      "rank": 155,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.3.2"
+    },
+    {
+      "category": "formula",
+      "description": "Install various Ruby versions and implementations",
+      "id": "brew:ruby-build",
+      "install": {
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "ruby-build"
+        ]
+      },
+      "install_count": "11,108",
+      "latest": true,
+      "name": "Homebrew: ruby-build",
+      "official_source": true,
+      "rank": 156,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "20261023"
+    },
+    {
+      "category": "formula",
+      "description": "Collection of portable C++ source libraries",
+      "id": "brew:boost",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "boost"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "boost"
+        ]
+      },
+      "install_count": "11,082",
+      "latest": true,
+      "name": "Homebrew: boost",
+      "official_source": true,
+      "rank": 157,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.92.0"
+    },
+    {
+      "category": "formula",
+      "description": "Display and control your Android device",
+      "id": "brew:scrcpy",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "scrcpy"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "scrcpy"
+        ]
+      },
+      "install_count": "11,080",
+      "latest": true,
+      "name": "Homebrew: scrcpy",
+      "official_source": true,
+      "rank": 158,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "5.0.1"
+    },
+    {
+      "category": "formula",
+      "description": "Easiest way to build and release mobile apps",
+      "id": "brew:fastlane",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "fastlane"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "fastlane"
+        ]
+      },
+      "install_count": "10,744",
+      "latest": true,
+      "name": "Homebrew: fastlane",
+      "official_source": true,
+      "rank": 159,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.241.2"
+    },
+    {
+      "category": "formula",
+      "description": "Tool for creating isolated virtual python environments",
+      "id": "brew:virtualenv",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "virtualenv"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "virtualenv"
+        ]
+      },
+      "install_count": "10,618",
+      "latest": true,
+      "name": "Homebrew: virtualenv",
+      "official_source": true,
+      "rank": 160,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "21.15.6"
+    },
+    {
+      "category": "formula",
+      "description": "Command-line tool to install and switch between multiple versions of Xcode",
+      "id": "brew:xcodes",
+      "install": {
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "xcodes"
+        ]
+      },
+      "install_count": "10,544",
+      "latest": true,
+      "name": "Homebrew: xcodes",
+      "official_source": true,
+      "rank": 161,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.1.0"
+    },
+    {
+      "category": "formula",
+      "description": "Client library for huggingface.co hub",
+      "id": "brew:hf",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "hf"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "hf"
+        ]
+      },
+      "install_count": "10,189",
+      "latest": true,
+      "name": "Homebrew: hf",
+      "official_source": true,
+      "rank": 162,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.4.0"
+    },
+    {
+      "category": "formula",
+      "description": "Tool for managing OCI containers and pods",
+      "id": "brew:podman",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "podman"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "podman"
+        ]
+      },
+      "install_count": "10,177",
+      "latest": true,
+      "name": "Homebrew: podman",
+      "official_source": true,
+      "rank": 163,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "6.1.4"
+    },
+    {
+      "category": "formula",
+      "description": "Dependency manager that installs and runs Swift command-line tool packages",
+      "id": "brew:mint",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "mint"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "mint"
+        ]
+      },
+      "install_count": "10,170",
+      "latest": true,
+      "name": "Homebrew: mint",
+      "official_source": true,
+      "rank": 164,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.18.0"
+    },
+    {
+      "category": "formula",
+      "description": "Tool to check and fix license headers and resolve dependency licenses",
+      "id": "brew:license-eye",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "license-eye"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "license-eye"
+        ]
+      },
+      "install_count": "9,891",
+      "latest": true,
+      "name": "Homebrew: license-eye",
+      "official_source": true,
+      "rank": 165,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.9.0"
+    },
+    {
+      "category": "formula",
+      "description": "Run your GitHub Actions locally",
+      "id": "brew:act",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "act"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "act"
+        ]
+      },
+      "install_count": "9,852",
+      "latest": true,
+      "name": "Homebrew: act",
+      "official_source": true,
+      "rank": 166,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.2.97"
+    },
+    {
+      "category": "formula",
+      "description": "Parser generator tool",
+      "id": "brew:tree-sitter-cli",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "tree-sitter-cli"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "tree-sitter-cli"
+        ]
+      },
+      "install_count": "9,839",
+      "latest": true,
+      "name": "Homebrew: tree-sitter-cli",
+      "official_source": true,
+      "rank": 167,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.27.2"
+    },
+    {
+      "category": "formula",
+      "description": "Media player based on MPlayer and mplayer2",
+      "id": "brew:mpv",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "mpv"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "mpv"
+        ]
+      },
+      "install_count": "9,704",
+      "latest": true,
+      "name": "Homebrew: mpv",
+      "official_source": true,
+      "rank": 168,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.42.0"
+    },
+    {
+      "category": "formula",
+      "description": "Command-line YAML and XML processor that wraps jq",
+      "id": "brew:python-yq",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "python-yq"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "python-yq"
+        ]
+      },
+      "install_count": "9,649",
+      "latest": true,
+      "name": "Homebrew: python-yq",
+      "official_source": true,
+      "rank": 169,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "4.4.5"
+    },
+    {
+      "category": "formula",
+      "description": "AI agent toolkit",
+      "id": "brew:pi-coding-agent",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "pi-coding-agent"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "pi-coding-agent"
+        ]
+      },
+      "install_count": "9,646",
+      "latest": true,
+      "name": "Homebrew: pi-coding-agent",
+      "official_source": true,
+      "rank": 170,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.5.0"
+    },
+    {
+      "category": "formula",
+      "description": "Powerful, enterprise-ready, open source web server with automatic HTTPS",
+      "id": "brew:caddy",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "caddy"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "caddy"
+        ]
+      },
+      "install_count": "9,599",
+      "latest": true,
+      "name": "Homebrew: caddy",
+      "official_source": true,
+      "rank": 171,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.11.9"
+    },
+    {
+      "category": "formula",
+      "description": "HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server",
+      "id": "brew:nginx",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "nginx"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "nginx"
+        ]
+      },
+      "install_count": "9,377",
+      "latest": true,
+      "name": "Homebrew: nginx",
+      "official_source": true,
+      "rank": 172,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.31.8"
+    },
+    {
+      "category": "formula",
+      "description": "Parse binary .xcresult bundles from Xcode builds and test runs",
+      "id": "brew:xcresultparser",
+      "install": {
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "xcresultparser"
+        ]
+      },
+      "install_count": "9,252",
+      "latest": true,
+      "name": "Homebrew: xcresultparser",
+      "official_source": true,
+      "rank": 173,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.2.0"
+    },
+    {
+      "category": "formula",
+      "description": "Generic library support script",
+      "id": "brew:libtool",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "libtool"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "libtool"
+        ]
+      },
+      "install_count": "9,203",
+      "latest": true,
+      "name": "Homebrew: libtool",
+      "official_source": true,
+      "rank": 174,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.6.2"
+    },
+    {
+      "category": "formula",
+      "description": "General-purpose lossless data-compression library",
+      "id": "brew:zlib",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "zlib"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "zlib"
+        ]
+      },
+      "install_count": "9,171",
+      "latest": true,
+      "name": "Homebrew: zlib",
+      "official_source": true,
+      "rank": 175,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.4"
+    },
+    {
+      "category": "formula",
+      "description": "Define your dev environment as code. For microservice apps on Kubernetes",
+      "id": "brew:tilt",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "tilt"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "tilt"
+        ]
+      },
+      "install_count": "9,092",
+      "latest": true,
+      "name": "Homebrew: tilt",
+      "official_source": true,
+      "rank": 176,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.37.8"
+    },
+    {
+      "category": "formula",
+      "description": "OpenBSD freely-licensed SSH connectivity tools",
+      "id": "brew:openssh",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "openssh"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "openssh"
+        ]
+      },
+      "install_count": "9,017",
+      "latest": true,
+      "name": "Homebrew: openssh",
+      "official_source": true,
+      "rank": 177,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "10.6p2"
+    },
+    {
+      "category": "formula",
+      "description": "Little helper to run CNCF's k3s in Docker",
+      "id": "brew:k3d",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "k3d"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "k3d"
+        ]
+      },
+      "install_count": "8,997",
+      "latest": true,
+      "name": "Homebrew: k3d",
+      "official_source": true,
+      "rank": 178,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "5.9.0"
+    },
+    {
+      "category": "formula",
+      "description": "Find and verify credentials",
+      "id": "brew:trufflehog",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "trufflehog"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "trufflehog"
+        ]
+      },
+      "install_count": "8,875",
+      "latest": true,
+      "name": "Homebrew: trufflehog",
+      "official_source": true,
+      "rank": 179,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.99.8"
+    },
+    {
+      "category": "formula",
+      "description": "Secure runtime for JavaScript and TypeScript",
+      "id": "brew:deno",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "deno"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "deno"
+        ]
+      },
+      "install_count": "8,735",
+      "latest": true,
+      "name": "Homebrew: deno",
+      "official_source": true,
+      "rank": 180,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.9.8"
+    },
+    {
+      "category": "formula",
+      "description": "Extendable version manager with support for Ruby, Node.js, Erlang & more",
+      "id": "brew:asdf",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "asdf"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "asdf"
+        ]
+      },
+      "install_count": "8,720",
+      "latest": true,
+      "name": "Homebrew: asdf",
+      "official_source": true,
+      "rank": 181,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.20.2"
+    },
+    {
+      "category": "formula",
+      "description": "Libraries for security-enabled client and server applications",
+      "id": "brew:nss",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "nss"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "nss"
+        ]
+      },
+      "install_count": "8,655",
+      "latest": true,
+      "name": "Homebrew: nss",
+      "official_source": true,
+      "rank": 182,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.133"
+    },
+    {
+      "category": "formula",
+      "description": "Easily detect and prevent bugs and anti-patterns in your codebase",
+      "id": "brew:semgrep",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "semgrep"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "semgrep"
+        ]
+      },
+      "install_count": "8,648",
+      "latest": true,
+      "name": "Homebrew: semgrep",
+      "official_source": true,
+      "rank": 183,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.184.0"
+    },
+    {
+      "category": "formula",
+      "description": "7-Zip (high compression file archiver) implementation",
+      "id": "brew:p7zip",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "p7zip"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "p7zip"
+        ]
+      },
+      "install_count": "8,465",
+      "latest": true,
+      "name": "Homebrew: p7zip",
+      "official_source": true,
+      "rank": 184,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "17.06"
+    },
+    {
+      "category": "formula",
+      "description": "Perl lib for reading and writing EXIF metadata",
+      "id": "brew:exiftool",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "exiftool"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "exiftool"
+        ]
+      },
+      "install_count": "8,401",
+      "latest": true,
+      "name": "Homebrew: exiftool",
+      "official_source": true,
+      "rank": 185,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "13.55"
+    },
+    {
+      "category": "formula",
+      "description": "Play, record, convert, and stream many audio and video codecs",
+      "id": "brew:ffmpeg-full",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "ffmpeg-full"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "ffmpeg-full"
+        ]
+      },
+      "install_count": "8,379",
+      "latest": true,
+      "name": "Homebrew: ffmpeg-full",
+      "official_source": true,
+      "rank": 186,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "9.0.2"
+    },
+    {
+      "category": "formula",
+      "description": "Tools for and transforming and inspecting PDF files",
+      "id": "brew:qpdf",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "qpdf"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "qpdf"
+        ]
+      },
+      "install_count": "8,377",
+      "latest": true,
+      "name": "Homebrew: qpdf",
+      "official_source": true,
+      "rank": 187,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "12.4.2"
+    },
+    {
+      "category": "formula",
+      "description": "CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM",
+      "id": "brew:aws-sam-cli",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "aws-sam-cli"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "aws-sam-cli"
+        ]
+      },
+      "install_count": "8,265",
+      "latest": true,
+      "name": "Homebrew: aws-sam-cli",
+      "official_source": true,
+      "rank": 188,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.171.0"
+    },
+    {
+      "category": "formula",
+      "description": "Framework for layout and rendering of i18n text",
+      "id": "brew:pango",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "pango"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "pango"
+        ]
+      },
+      "install_count": "8,250",
+      "latest": true,
+      "name": "Homebrew: pango",
+      "official_source": true,
+      "rank": 189,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.58.2"
+    },
+    {
+      "category": "formula",
+      "description": "Command-line unarchiving tools supporting multiple formats",
+      "id": "brew:unar",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "unar"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "unar"
+        ]
+      },
+      "install_count": "8,100",
+      "latest": true,
+      "name": "Homebrew: unar",
+      "official_source": true,
+      "rank": 190,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.10.8"
+    },
+    {
+      "category": "formula",
+      "description": "Linter for YAML files",
+      "id": "brew:yamllint",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "yamllint"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "yamllint"
+        ]
+      },
+      "install_count": "7,826",
+      "latest": true,
+      "name": "Homebrew: yamllint",
+      "official_source": true,
+      "rank": 191,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.38.0"
+    },
+    {
+      "category": "formula",
+      "description": "ISO/IEC 23008-12:2017 HEIF file format decoder and encoder",
+      "id": "brew:libheif",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "libheif"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "libheif"
+        ]
+      },
+      "install_count": "7,764",
+      "latest": true,
+      "name": "Homebrew: libheif",
+      "official_source": true,
+      "rank": 192,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.23.7"
+    },
+    {
+      "category": "formula",
+      "description": "Find security issues in GitHub Actions setups",
+      "id": "brew:zizmor",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "zizmor"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "zizmor"
+        ]
+      },
+      "install_count": "7,712",
+      "latest": true,
+      "name": "Homebrew: zizmor",
+      "official_source": true,
+      "rank": 193,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.32.0"
+    },
+    {
+      "category": "formula",
+      "description": "Quickly rewrite git repository history",
+      "id": "brew:git-filter-repo",
+      "install": {
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "git-filter-repo"
+        ]
+      },
+      "install_count": "7,641",
+      "latest": true,
+      "name": "Homebrew: git-filter-repo",
+      "official_source": true,
+      "rank": 194,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.47.0"
+    },
+    {
+      "category": "formula",
+      "description": "LLVM Project Linker",
+      "id": "brew:lld",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "lld"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "lld"
+        ]
+      },
+      "install_count": "7,626",
+      "latest": true,
+      "name": "Homebrew: lld",
+      "official_source": true,
+      "rank": 195,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "23.1.5"
+    },
+    {
+      "category": "formula",
+      "description": "User-friendly cURL replacement (command-line HTTP client)",
+      "id": "brew:httpie",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "httpie"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "httpie"
+        ]
+      },
+      "install_count": "7,551",
+      "latest": true,
+      "name": "Homebrew: httpie",
+      "official_source": true,
+      "rank": 196,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "3.2.4"
+    },
+    {
+      "category": "formula",
+      "description": "Very fast implementation of tldr in Rust",
+      "id": "brew:tealdeer",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "tealdeer"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "tealdeer"
+        ]
+      },
+      "install_count": "7,495",
+      "latest": true,
+      "name": "Homebrew: tealdeer",
+      "official_source": true,
+      "rank": 197,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "1.9.1"
+    },
+    {
+      "category": "formula",
+      "description": "Azure Storage data transfer utility",
+      "id": "brew:azcopy",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "azcopy"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "azcopy"
+        ]
+      },
+      "install_count": "7,481",
+      "latest": true,
+      "name": "Homebrew: azcopy",
+      "official_source": true,
+      "rank": 198,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "10.34.1"
+    },
+    {
+      "category": "formula",
+      "description": "Embeddable SQL OLAP Database Management System",
+      "id": "brew:duckdb",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "duckdb"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "duckdb"
+        ]
+      },
+      "install_count": "7,397",
+      "latest": true,
+      "name": "Homebrew: duckdb",
+      "official_source": true,
+      "rank": 199,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "2.0.0"
+    },
+    {
+      "category": "formula",
+      "description": "Browser automation CLI for AI agents",
+      "id": "brew:agent-browser",
+      "install": {
+        "linux": [
+          "brew",
+          "install",
+          "--formula",
+          "agent-browser"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "--formula",
+          "agent-browser"
+        ]
+      },
+      "install_count": "7,358",
+      "latest": true,
+      "name": "Homebrew: agent-browser",
+      "official_source": true,
+      "rank": 200,
+      "requirements": [
+        "homebrew"
+      ],
+      "source": "homebrew",
+      "standalone": null,
+      "version": "0.41.2"
+    }
+  ],
+  "schema_version": 1,
+  "source": "https://formulae.brew.sh/api/analytics/install-on-request/30d.json",
+  "start_date": "2026-10-09"
+}

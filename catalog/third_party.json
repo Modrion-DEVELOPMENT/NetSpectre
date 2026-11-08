@@ -52,6 +52,16 @@
           "-c",
           "import venv, ensurepip"
         ]
+      },
+      "source": "local",
+      "category": "runtime",
+      "official_source": true,
+      "standalone": true,
+      "latest": false,
+      "platform_requirements": {
+        "macos": [
+          "homebrew"
+        ]
       }
     },
     {
@@ -108,6 +118,16 @@
           "ollama",
           "--version"
         ]
+      },
+      "source": "local",
+      "category": "runtime",
+      "official_source": true,
+      "standalone": true,
+      "latest": true,
+      "platform_requirements": {
+        "macos": [
+          "homebrew"
+        ]
       }
     },
     {
@@ -158,7 +178,12 @@
           "pip",
           "--version"
         ]
-      }
+      },
+      "source": "local",
+      "category": "runtime",
+      "official_source": false,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "requests",
@@ -193,7 +218,12 @@
           "--upgrade",
           "requests"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "numpy",
@@ -228,7 +258,12 @@
           "--upgrade",
           "numpy"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "ollama-python",
@@ -264,7 +299,12 @@
           "--upgrade",
           "ollama"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "pandas",
@@ -299,7 +339,12 @@
           "--upgrade",
           "pandas"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "pillow",
@@ -334,7 +379,12 @@
           "--upgrade",
           "pillow"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "rich",
@@ -369,7 +419,12 @@
           "--upgrade",
           "rich"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "httpx",
@@ -404,7 +459,12 @@
           "--upgrade",
           "httpx"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "flask",
@@ -439,7 +499,12 @@
           "--upgrade",
           "flask"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "fastapi",
@@ -474,7 +539,12 @@
           "--upgrade",
           "fastapi"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "uvicorn",
@@ -509,7 +579,12 @@
           "--upgrade",
           "uvicorn"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "pydantic",
@@ -544,7 +619,12 @@
           "--upgrade",
           "pydantic"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "pytest",
@@ -579,7 +659,12 @@
           "--upgrade",
           "pytest"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "ruff",
@@ -614,7 +699,12 @@
           "--upgrade",
           "ruff"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "black",
@@ -649,7 +739,12 @@
           "--upgrade",
           "black"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "mypy",
@@ -684,7 +779,12 @@
           "--upgrade",
           "mypy"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "beautifulsoup4",
@@ -719,7 +819,12 @@
           "--upgrade",
           "beautifulsoup4"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "pyyaml",
@@ -754,7 +859,12 @@
           "--upgrade",
           "pyyaml"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "click",
@@ -789,7 +899,12 @@
           "--upgrade",
           "click"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "typer",
@@ -824,7 +939,12 @@
           "--upgrade",
           "typer"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "tqdm",
@@ -859,7 +979,12 @@
           "--upgrade",
           "tqdm"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "sqlalchemy",
@@ -894,7 +1019,12 @@
           "--upgrade",
           "sqlalchemy"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "jinja2",
@@ -929,7 +1059,12 @@
           "--upgrade",
           "jinja2"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "packaging",
@@ -964,7 +1099,12 @@
           "--upgrade",
           "packaging"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "platformdirs",
@@ -999,7 +1139,12 @@
           "--upgrade",
           "platformdirs"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "python-dotenv",
@@ -1034,7 +1179,12 @@
           "--upgrade",
           "python-dotenv"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "websockets",
@@ -1069,7 +1219,12 @@
           "--upgrade",
           "websockets"
         ]
-      }
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
     },
     {
       "id": "aiohttp",
@@ -1103,6 +1258,77 @@
           "install",
           "--upgrade",
           "aiohttp"
+        ]
+      },
+      "source": "pypi",
+      "category": "library",
+      "official_source": true,
+      "standalone": false,
+      "latest": true
+    },
+    {
+      "id": "homebrew",
+      "name": "Homebrew",
+      "description": "Package manager for macOS and Linux. Official interactive installer; requires system build tools.",
+      "version": "latest",
+      "source": "homebrew",
+      "category": "manager",
+      "official_source": true,
+      "standalone": true,
+      "latest": true,
+      "requirements": [],
+      "install": {
+        "macos": [
+          [
+            "curl",
+            "--fail",
+            "--show-error",
+            "--location",
+            "--proto",
+            "=https",
+            "--proto-redir",
+            "=https",
+            "--max-time",
+            "120",
+            "https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh",
+            "--output",
+            "{homebrew_installer}"
+          ],
+          [
+            "/bin/bash",
+            "{homebrew_installer}"
+          ]
+        ],
+        "linux": [
+          [
+            "curl",
+            "--fail",
+            "--show-error",
+            "--location",
+            "--proto",
+            "=https",
+            "--proto-redir",
+            "=https",
+            "--max-time",
+            "120",
+            "https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh",
+            "--output",
+            "{homebrew_installer}"
+          ],
+          [
+            "/bin/bash",
+            "{homebrew_installer}"
+          ]
+        ]
+      },
+      "check": {
+        "macos": [
+          "brew",
+          "--version"
+        ],
+        "linux": [
+          "brew",
+          "--version"
         ]
       }
     }

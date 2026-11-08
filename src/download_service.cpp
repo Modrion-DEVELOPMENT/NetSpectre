@@ -9,6 +9,7 @@
 #include <iostream>
 #include <regex>
 #include <set>
+#include <sstream>
 #include <stdexcept>
 #ifdef _WIN32
 #include <windows.h>
@@ -71,7 +72,19 @@ BOOL WINAPI ignoreInterrupt(DWORD event) { return event == CTRL_C_EVENT || event
         }
 
         // Argument vectors are passed directly to the OS, never interpreted by a shell.
-        int run(const Command &command, std::string *output) {
+        int run(const Command &originalCommand, std::string *output) {
+            Command command=originalCommand;
+#ifndef _WIN32
+            if (!command.empty() && command[0]=="brew") {
+                bool onPath=false;
+                const char* path=std::getenv("PATH");
+                std::istringstream paths(path ? path : ""); std::string directory;
+                while (std::getline(paths,directory,':'))
+                    if (access(((directory.empty() ? "." : directory)+"/brew").c_str(),X_OK)==0) onPath=true;
+                if (!onPath) for (const auto* executable : {"/opt/homebrew/bin/brew","/usr/local/bin/brew","/home/linuxbrew/.linuxbrew/bin/brew"})
+                    if (access(executable,X_OK)==0) { command[0]=executable; break; }
+            }
+#endif
             if (command.empty() || command[0].empty()) throw std::runtime_error("Empty install command.");
             for (const auto &arg: command)
                 if (arg.find('\0') != std::string::npos) throw std::runtime_error("Invalid command argument.");
@@ -146,7 +159,7 @@ BOOL WINAPI ignoreInterrupt(DWORD event) { return event == CTRL_C_EVENT || event
                 char data[4096];
                 std::size_t count;
                 while ((count = std::fread(data, 1, sizeof(data), capture)) != 0) {
-                    if (output->size() + count > 8 * 1024 * 1024) {
+                    if (output->size() + count > 64 * 1024 * 1024) {
                         result = 1;
                         break;
                     }
@@ -158,15 +171,16 @@ BOOL WINAPI ignoreInterrupt(DWORD event) { return event == CTRL_C_EVENT || event
         }
 
         std::string fetch(const std::string &url) {
-            if (url.compare(0, 19, "https://ollama.com/") != 0)
-                throw std::runtime_error("Only official Ollama catalog URLs are supported.");
+            if (url.compare(0, 19, "https://ollama.com/") != 0 &&
+        url.compare(0, std::string("https://formulae.brew.sh/api/").size(), "https://formulae.brew.sh/api/") != 0)
+                throw std::runtime_error("Only official catalog URLs are supported.");
             std::string output;
             if (run({
                         "curl", "--fail", "--silent", "--show-error", "--location", "--proto", "=https",
                         "--proto-redir", "=https", "--connect-timeout", "4", "--max-time", "15",
-                        "--max-filesize", "8000000", "--header", "HX-Request: true", url
+                        "--compressed", "--max-filesize", "64000000", "--header", "HX-Request: true", url
                     }, &output) != 0)
-                throw std::runtime_error("Ollama request failed. Check your connection and curl installation.");
+                throw std::runtime_error("Catalog request failed. Check your connection and curl installation.");
             return output;
         }
 
@@ -214,7 +228,7 @@ BOOL WINAPI ignoreInterrupt(DWORD event) { return event == CTRL_C_EVENT || event
                     status += "; cache could not be saved";
                 }
             } catch (const std::exception &error) {
-                status = std::string(error.what()) + " Using offline tags.";
+                status = "Using offline tags. " + std::string(error.what());
                 std::ifstream file(path);
                 if (file) {
                     nlohmann::json data;
@@ -265,7 +279,12 @@ BOOL WINAPI ignoreInterrupt(DWORD event) { return event == CTRL_C_EVENT || event
                     done.insert(id);
                     return;
                 }
-                for (const auto &requirement: entry.value("requirements", std::vector<std::string>{})) {
+                auto requirements=entry.value("requirements",std::vector<std::string>{});
+                if (entry.contains("platform_requirements") && entry.at("platform_requirements").contains(platform())) {
+                    auto extra=entry.at("platform_requirements").at(platform()).get<std::vector<std::string>>();
+                    requirements.insert(requirements.end(),extra.begin(),extra.end());
+                }
+                for (const auto &requirement: requirements) {
                     bool found = false;
                     for (const auto &candidate: document.at("packages"))
                         if (candidate.at("id") == requirement) {
@@ -313,7 +332,7 @@ BOOL WINAPI ignoreInterrupt(DWORD event) { return event == CTRL_C_EVENT || event
                     for (const auto &command: step.commands) std::cout << "  " << display(command) << '\n';
                 }
                 std::cout <<
-                        "\nCommands come from catalog/third_party.json. System installs may request administrator rights.\n"
+                        "\nReview the catalog installation commands above. System installs may request administrator rights.\n"
                         "Type INSTALL to proceed, or press Enter to cancel: " << std::flush;
                 std::string answer;
                 if (!std::getline(std::cin, answer) || answer != "INSTALL") return "Installation cancelled.";
@@ -321,7 +340,7 @@ BOOL WINAPI ignoreInterrupt(DWORD event) { return event == CTRL_C_EVENT || event
                 for (auto &step: plan)
                     for (auto &command: step.commands)
                         for (auto &arg: command)
-                            if (arg == "{ollama_installer}") {
+                            if (arg == "{ollama_installer}" || arg == "{homebrew_installer}") {
                                 if (!installerFile) installerFile.reset(new InstallerFile());
                                 arg = installerFile->path();
                             }

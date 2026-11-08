@@ -2,6 +2,8 @@
 // See LICENSE and ADDITIONAL_TERMS.md.
 #include "downloader.h"
 #include "download_service.h"
+#include "catalog_sources.h"
+#include "catalog_filters.h"
 #include <chrono>
 #include <algorithm>
 #include <cerrno>
@@ -48,6 +50,7 @@ namespace netspro {
         };
 
         std::future<std::vector<Program> > onlineModels;
+        std::future<nlohmann::json> onlineHomebrew;
 
         std::vector<Program> cachedOllamaModels() {
             std::vector<Program> models;
@@ -125,6 +128,32 @@ namespace netspro {
             return result;
         }
 
+        nlohmann::json metadata(const Program& p) {
+            if (!p.package.is_null()) return p.package;
+            return {{"source", "ollama"}, {"category", "model"}, {"official_source", true},
+                {"standalone", false}, {"latest", p.name.find(':') == std::string::npos || p.name.substr(p.name.find(':')+1) == "latest"},
+                {"install", {{"windows", {}}, {"macos", {}}, {"linux", {}}}}};
+        }
+        void mergeHomebrew(std::vector<Program>& entries, const nlohmann::json& document) {
+            const auto packages = document.at("packages");
+            if (packages.size() != 200) throw std::runtime_error("Invalid Homebrew catalog size.");
+            std::vector<Program> replacements;
+            for (const auto& package : packages) {
+                std::string systems;
+                for (const auto& item : package.at("install").items()) systems += (systems.empty() ? "" : ", ") + item.key();
+                replacements.push_back({package.at("name"), package.at("description"), systems, package.at("version"), package});
+            }
+            std::size_t next = 0;
+            for (auto& entry : entries)
+                if (!entry.package.is_null() && entry.package.value("category", "") == "formula") entry = replacements.at(next++);
+            while (next < replacements.size()) entries.push_back(replacements[next++]);
+            auto& all = packageDocument["packages"];
+            for (auto it=all.begin(); it!=all.end();) {
+                if (it->value("category", "") == "formula") it=all.erase(it); else ++it;
+            }
+            for (const auto& package : packages) all.push_back(package);
+        }
+
         std::vector<Program> &catalog() {
             static std::vector<Program> combined;
             static bool loaded = false;
@@ -154,6 +183,14 @@ namespace netspro {
                             "select tag"
                         });
                 } catch (const std::exception &error) { catalogStatus = error.what(); }
+                try {
+                    std::ifstream cache("catalog/homebrew-cache.json");
+                    if (!cache) cache.open("catalog/homebrew.json");
+                    if (cache) {
+                        nlohmann::json data; cache >> data; mergeHomebrew(combined, data);
+                        catalogStatus += " Homebrew ranking through " + data.value("end_date", "unknown") + ".";
+                    }
+                } catch (const std::exception& error) { catalogStatus += std::string(" Homebrew cache: ") + error.what(); }
                 for (const auto &model: cachedOllamaModels()) {
                     if (std::none_of(combined.begin(), combined.end(), [&](const Program &p) {
                         return p.systems == "Ollama" && p.name == model.name;
@@ -162,6 +199,30 @@ namespace netspro {
                 }
             }
             return combined;
+        }
+
+        bool updateHomebrewCatalog() {
+            if (!onlineHomebrew.valid() || onlineHomebrew.wait_for(std::chrono::seconds(0)) != std::future_status::ready) return false;
+            try {
+                auto data=onlineHomebrew.get(); mergeHomebrew(catalog(),data);
+                catalogStatus="Homebrew Top 200 refreshed (direct installs, 30 days).";
+                const std::string path="catalog/homebrew-cache.json";
+                const std::string temp=path+".tmp."+std::to_string(
+#ifdef _WIN32
+                    _getpid()
+#else
+                    getpid()
+#endif
+                );
+                std::ofstream file(temp); file << data.dump(2); file.close();
+#ifdef _WIN32
+                const bool saved=file && MoveFileExA(temp.c_str(),path.c_str(),MOVEFILE_REPLACE_EXISTING | MOVEFILE_WRITE_THROUGH);
+#else
+                const bool saved=file && std::rename(temp.c_str(),path.c_str())==0;
+#endif
+                if (!saved) { std::remove(temp.c_str()); catalogStatus+=" Cache write failed."; }
+            } catch (const std::exception& error) { catalogStatus=std::string("Homebrew: ")+error.what()+" Offline catalog retained."; }
+            return true;
         }
 
         bool updateOnlineCatalog() {
@@ -389,6 +450,9 @@ namespace netspro {
             std::size_t selected_ = 0;
             bool searching_ = false, details_ = false;
             int requested_ = -1;
+            CatalogFilters filters_;
+            bool filtersOpen_ = false;
+            int filterRow_ = 0;
             int width_ = 80, height_ = 24, pageSize_ = 8, hoverX_ = 0, hoverY_ = 0;
             static constexpr int firstRow_ = 7;
 
@@ -397,10 +461,14 @@ namespace netspro {
                 const auto needle = lower(query_);
                 for (std::size_t i = 0; i < catalog().size(); ++i) {
                     const auto &p = catalog()[i];
-                    if (lower(p.name + " " + p.description + " " + p.systems + " " + p.version).find(needle) !=
+                    if (filters_.accepts(metadata(p)) && lower(p.name + " " + p.description + " " + p.systems + " " + p.version).find(needle) !=
                         std::string::npos)
                         matches_.push_back(i);
                 }
+                if (filters_.choices[6]) std::stable_sort(matches_.begin(),matches_.end(),[&](std::size_t a,std::size_t b) {
+                    if (filters_.choices[6]==1) return lower(catalog()[a].name)<lower(catalog()[b].name);
+                    return metadata(catalog()[a]).value("rank",100000)<metadata(catalog()[b]).value("rank",100000);
+                });
                 selected_ = 0;
             }
 
@@ -519,17 +587,30 @@ namespace netspro {
                     button(2, 34, "[ Next > ]");
                 }
                 button(2, 47, "[ Close Q ]");
-                line(3, "PACKAGES / OLLAMA - real installs; commands require confirmation.");
+                button(3,2,"[ Filters F ]");
+                int active=0; for (int choice : filters_.choices) if (choice) ++active;
+                frame_ << "\033[3;17H" << active << " active | Homebrew / Python / Ollama";
                 line(4, (searching_ ? "Search> " : "Search: ") + query_ + (searching_ ? "_" : ""),
                      searching_ ? input_ : "");
                 if (searching_) line(5, "Type to filter | Backspace to edit | Enter to accept | Escape to cancel");
                 else line(5, "Arrows: select/page | Enter: details | /: search | Mouse: hover/click/scroll");
+                if (filtersOpen_) {
+                    line(5,"Up/Down: select | Enter/arrows: change | R: reset | Esc/F: done");
+                    for (int row=0;row<7;++row)
+                        line(7+row,filters_.names[row]+": "+filters_.options[row][filters_.choices[row]],row==filterRow_ ? "\033[7m" : "");
+                    line(height_-3,"Filters combine with search | "+std::to_string(matches_.size())+" matches",accent_);
+                    line(height_-1,"Standalone: no extra runtime; unknown metadata stays Unknown.");
+                    present(); return;
+                }
                 if (details_ && !matches_.empty()) {
                     const auto &p = catalog()[matches_[selected_]];
                     line(7, p.name, accent_);
                     line(9, p.description);
                     line(11, "Supported OS: " + p.systems);
                     line(12, "Version: " + p.version);
+                    const auto meta = metadata(p);
+                    line(10,"Source: " + meta.value("source","local") +
+                        (meta.contains("rank") ? " | 30-day rank: " + std::to_string(meta.at("rank").get<int>()) : ""));
                     button(14, 2, p.systems == "Ollama" && p.name.find(':') == std::string::npos
                                       ? "[ Browse tags: Enter ]"
                                       : "[ Install: Enter ]");
@@ -565,6 +646,22 @@ namespace netspro {
                     hoverY_ = 0;
                 }
                 if (event.key == Key::Quit) return false;
+                if (filtersOpen_) {
+                    bool changed=false;
+                    if (event.key==Key::Escape || (event.key==Key::Character && (event.ch=='f' || event.ch=='F'))) filtersOpen_=false;
+                    else if (event.key==Key::Up) filterRow_=std::max(0,filterRow_-1);
+                    else if (event.key==Key::Down) filterRow_=std::min(6,filterRow_+1);
+                    else if (event.key==Key::Enter || event.key==Key::Right || event.key==Key::Left) {
+                        filters_.cycle(filterRow_,event.key==Key::Left ? -1 : 1); changed=true;
+                    } else if (event.key==Key::Character && (event.ch=='r' || event.ch=='R')) {
+                        std::fill(filters_.choices.begin(),filters_.choices.end(),0); changed=true;
+                    } else if (event.key==Key::Mouse && event.y>=7 && event.y<=13) {
+                        filterRow_=event.y-7;
+                        if (event.click) { filters_.cycle(filterRow_,1); changed=true; }
+                    } else if (event.key==Key::Mouse && event.click && event.y==3) filtersOpen_=false;
+                    if (changed) filter();
+                    return true;
+                }
                 if (searching_) {
                     if (event.key == Key::Escape) {
                         query_ = savedQuery_;
@@ -579,6 +676,10 @@ namespace netspro {
                         filter();
                     }
                     return true;
+                }
+                if ((event.key==Key::Character && (event.ch=='f' || event.ch=='F')) ||
+                    (event.key==Key::Mouse && event.click && event.y==3 && event.x>=2 && event.x<=14)) {
+                    filtersOpen_=true; details_=false; return true;
                 }
                 if (event.key == Key::Escape) {
                     if (details_) details_ = false;
@@ -638,6 +739,7 @@ namespace netspro {
     }
 
     void startCatalogRefresh() {
+        if (!onlineHomebrew.valid()) onlineHomebrew=std::async(std::launch::async,downloads::fetchHomebrewCatalog);
         if (!onlineModels.valid()) onlineModels = std::async(std::launch::async, fetchOllamaModels);
     }
 
@@ -654,7 +756,9 @@ namespace netspro {
                     const Event event = terminal.readEvent();
                     running = view.handle(event);
                     const auto nextSize = terminal.size();
-                    const bool updated = updateOnlineCatalog();
+                    const bool modelsUpdated=updateOnlineCatalog();
+                    const bool brewUpdated=view.hasRequest() ? false : updateHomebrewCatalog();
+                    const bool updated=modelsUpdated || brewUpdated;
                     if (updated) view.refresh();
                     if (event.key != Key::None || nextSize != dimensions || updated) {
                         dimensions = nextSize;

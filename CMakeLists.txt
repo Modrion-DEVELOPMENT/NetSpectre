@@ -15,10 +15,21 @@ if(APPLE)
     endif()
 endif()
 
-add_executable(Netspro src/main.cpp src/downloader.cpp src/download_service.cpp)
+add_executable(Netspro src/main.cpp src/downloader.cpp src/download_service.cpp src/catalog_sources.cpp)
 find_package(Threads REQUIRED)
 target_link_libraries(Netspro PRIVATE Threads::Threads)
 target_include_directories(Netspro PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/third_party")
+set(NETSPRO_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}" CACHE PATH "Executable output directory")
 set_target_properties(Netspro PROPERTIES
-        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+        RUNTIME_OUTPUT_DIRECTORY "${NETSPRO_OUTPUT_DIRECTORY}"
 )
+foreach(configuration DEBUG RELEASE RELWITHDEBINFO MINSIZEREL)
+    set_target_properties(Netspro PROPERTIES "RUNTIME_OUTPUT_DIRECTORY_${configuration}" "${NETSPRO_OUTPUT_DIRECTORY}")
+endforeach()
+if(WIN32)
+    target_compile_definitions(Netspro PRIVATE NOMINMAX WIN32_LEAN_AND_MEAN)
+endif()
+# Keep Windows installations independent of a separately installed MSVC runtime.
+if(MSVC)
+    set_property(TARGET Netspro PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+endif()

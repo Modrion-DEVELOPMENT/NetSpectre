@@ -1,10 +1,37 @@
+# Build output (build from source on each platform)
 /build/
+/cmake-build-*/
+/Netspro
+/Netspro.exe
+*.o
+*.obj
+*.pdb
+*.ilk
+*.dSYM/
+
+# Local application state and downloaded packages
 /config.json
 /config.json.tmp
 /downloads/
+/.netspro-python/
 /catalog/ollama-cache.json
 /catalog/ollama-cache.json.tmp.*
-
-/.netspro-python/
 /catalog/ollama-tags-*.json
 /catalog/ollama-tags-*.json.tmp.*
+/catalog/homebrew-cache.json
+/catalog/homebrew-cache.json.tmp.*
+
+# Editor, OS and Python caches
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+__pycache__/
+*.py[cod]
+*.log
+
+# Local secrets
+.env
+.env.*
+!.env.example
