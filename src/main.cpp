@@ -19,25 +19,23 @@
 #include <random>
 #include <stdexcept>
 #include <nlohmann/json.hpp>
+#include "downloader.h"
 
 // ===================== Declarations =====================
 void clearTerminal();
 void readUserInput();
 void showMainScreen();
 void processInput();
-std::string getSerialNumber();
 void login();
 void initializeTokens();
 void logo();
-bool dev_mode = false;
-bool developer = false;
-bool pro_basic = false;
+
 // Record Viewer
 void fakeLoading(double durationSeconds);
-
 void openRecordInteractive();
 void openRecordFile(const std::string& fileName);
 std::string createNewRecord();
+
 // Crypto / File Utils
 std::string encryptText(const std::string& text);
 std::string decryptText(const std::string& text);
@@ -58,11 +56,8 @@ long long random_int64(long long lo, long long hi);
 std::mt19937& rng();
 bool endsWith(const std::string& str, const std::string& suffix);
 nlohmann::json loadTheme(const std::string &themeName);
-
 std::string ansiColor(const std::string &colorName);
-
 std::string mainColor();
-
 void readInputLine(std::string &value);
 
 
@@ -79,12 +74,18 @@ std::vector<std::string> userTokens;
 std::vector<std::string> proBasicTokens;
 std::vector<std::string> devTokens;
 nlohmann::json activeTheme;
+bool dev_mode = false;
+bool developer = false;
+bool pro_basic = false;
+
+std::string getSerialNumber();
 
 static const std::vector<int> SHIFT = {9, 9, 4, 13, 2, 10, 3};
 
 
 // ===================== Main =====================
 int main() {
+    netspro::startCatalogRefresh();
     createJsonFile("config.json", {
                        {"version", 1},
                        {"theme", "dark"},
@@ -202,6 +203,7 @@ void readUserInput() {
     readInputLine(inputLine);
 }
 
+
 // ===================== Command Handling =====================
 static void help() {
     std::cout << "\nCommands:\n";
@@ -221,6 +223,7 @@ static void help() {
     std::cout << "  devinfo             - show dev status\n";
     std::cout << "  devmode on|off      - toggle (DEV only)\n\n";
     std::cout << "  devtools            - list developer tool commands\n\n";
+    if (developer) std::cout << "  downloader          - browse the demo download catalog\n";
 }
 
 static bool starts_with(const std::string& s, const std::string& prefix) {
@@ -300,8 +303,20 @@ void processInput() {
         if (arg == "on") dev_mode = true;
         else if (arg == "off") dev_mode = false;
         else std::cout << "Usage: devmode on|off\n";
-    }
-    else if (cmd == "devtools") {
+    } else if (cmd == "downloader") {
+        if (!developer) {
+            std::cout << "Access denied (DEV only).\n";
+            return;
+        }
+        try {
+            netspro::openDownloader(mainColor(),
+                                    ansiColor(activeTheme.at("accent").get<std::string>()),
+                                    ansiColor(activeTheme.at("input").get<std::string>()));
+        } catch (const std::exception &error) {
+            std::cerr << "Downloader error: " << error.what() << '\n';
+        }
+        std::cout << mainColor();
+    } else if (cmd == "devtools") {
         if (!developer) {
             std::cout << "Access denied (DEV only).\n";
             return;
@@ -310,6 +325,7 @@ void processInput() {
         std::cout << "- devinfo\n";
         std::cout << "- devmode on|off\n";
         std::cout << "- devtools\n";
+        std::cout << "- downloader\n";
     }
     else if (cmd == "exit") {
         // main handles exit
@@ -407,10 +423,10 @@ void logo() {
     std::cout << textColor << R"(   _  __    __    ____             __            ___  ___  ____ )" << "\n";
     std::cout << textColor << R"(  / |/ /__ / /_  / __/__  ___ ____/ /________   / _ \/ _ \/ __ \)" << "\n";
     std::cout << textColor << R"( /    / -_) __/ _\ \/ _ \/ -_) __/ __/ __/ -_) / ___/ , _/ /_/ /)" << "\n";
-    std::cout << textColor << R"(/_/|_/\__/\__/ /___/ .__/\__/\__/\__/__/  \__/ /_/  /_/|_|\____/ )" << "\n";
-    std::cout << textColor << "C++ EDITION       /_/" << accentColor;
+    std::cout << textColor << R"(/_/|_/\__/\__/ /___/ .__/\__/\__/\__/__/  \__//_/  /_/|_|\____/ )" << "\n";
+    std::cout << accentColor << "C++ EDITION" << textColor << "       /_/";
     if (dev_mode) {
-        std::cout << "                     Welcome developer! :)";
+        std::cout << accentColor << "                     Welcome developer! :)";
     }
     std::cout << mainColor() << "\n";
 }

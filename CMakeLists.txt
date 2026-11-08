@@ -15,7 +15,9 @@ if(APPLE)
     endif()
 endif()
 
-add_executable(Netspro src/main.cpp)
+add_executable(Netspro src/main.cpp src/downloader.cpp src/download_service.cpp)
+find_package(Threads REQUIRED)
+target_link_libraries(Netspro PRIVATE Threads::Threads)
 target_include_directories(Netspro PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/third_party")
 set_target_properties(Netspro PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"

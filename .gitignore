@@ -1,3 +1,10 @@
 /build/
 /config.json
 /config.json.tmp
+/downloads/
+/catalog/ollama-cache.json
+/catalog/ollama-cache.json.tmp.*
+
+/.netspro-python/
+/catalog/ollama-tags-*.json
+/catalog/ollama-tags-*.json.tmp.*
