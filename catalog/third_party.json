@@ -1,0 +1,1133 @@
+{
+  "schema_version": 1,
+  "packages": [
+    {
+      "id": "python",
+      "name": "Python",
+      "description": "Python runtime. Linux installer supports Debian/Ubuntu (apt); macOS requires Homebrew.",
+      "version": "latest",
+      "requirements": [],
+      "install": {
+        "windows": [
+          "winget",
+          "install",
+          "--exact",
+          "--id",
+          "Python.Python.3.13"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "python"
+        ],
+        "linux": [
+          [
+            "sudo",
+            "apt-get",
+            "update"
+          ],
+          [
+            "sudo",
+            "apt-get",
+            "install",
+            "-y",
+            "python3",
+            "python3-venv",
+            "python3-pip"
+          ]
+        ]
+      },
+      "check": {
+        "windows": [
+          "py",
+          "-3",
+          "--version"
+        ],
+        "macos": [
+          "python3",
+          "--version"
+        ],
+        "linux": [
+          "python3",
+          "-c",
+          "import venv, ensurepip"
+        ]
+      }
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama",
+      "description": "Local model runtime. Start the Ollama app or ollama serve before pulling models.",
+      "version": "latest",
+      "requirements": [],
+      "install": {
+        "windows": [
+          "winget",
+          "install",
+          "--exact",
+          "--id",
+          "Ollama.Ollama"
+        ],
+        "macos": [
+          "brew",
+          "install",
+          "ollama"
+        ],
+        "linux": [
+          [
+            "curl",
+            "--fail",
+            "--show-error",
+            "--location",
+            "--proto",
+            "=https",
+            "--proto-redir",
+            "=https",
+            "--max-time",
+            "120",
+            "https://ollama.com/install.sh",
+            "--output",
+            "{ollama_installer}"
+          ],
+          [
+            "sh",
+            "{ollama_installer}"
+          ]
+        ]
+      },
+      "check": {
+        "windows": [
+          "ollama",
+          "--version"
+        ],
+        "macos": [
+          "ollama",
+          "--version"
+        ],
+        "linux": [
+          "ollama",
+          "--version"
+        ]
+      }
+    },
+    {
+      "id": "python-env",
+      "name": "NetSpectre Python environment",
+      "description": "Isolated Python environment in .netspro-python; does not modify system Python.",
+      "version": "latest",
+      "requirements": [
+        "python"
+      ],
+      "install": {
+        "windows": [
+          "py",
+          "-3",
+          "-m",
+          "venv",
+          ".netspro-python"
+        ],
+        "macos": [
+          "python3",
+          "-m",
+          "venv",
+          ".netspro-python"
+        ],
+        "linux": [
+          "python3",
+          "-m",
+          "venv",
+          ".netspro-python"
+        ]
+      },
+      "check": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "--version"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "--version"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "--version"
+        ]
+      }
+    },
+    {
+      "id": "requests",
+      "name": "Requests",
+      "description": "HTTP client library.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "requests"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "requests"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "requests"
+        ]
+      }
+    },
+    {
+      "id": "numpy",
+      "name": "NumPy",
+      "description": "Numerical arrays and computing.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "numpy"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "numpy"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "numpy"
+        ]
+      }
+    },
+    {
+      "id": "ollama-python",
+      "name": "Ollama Python library",
+      "description": "Python client for Ollama.",
+      "version": "latest",
+      "requirements": [
+        "python-env",
+        "ollama"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "ollama"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "ollama"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "ollama"
+        ]
+      }
+    },
+    {
+      "id": "pandas",
+      "name": "pandas",
+      "description": "Tabular data analysis.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pandas"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pandas"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pandas"
+        ]
+      }
+    },
+    {
+      "id": "pillow",
+      "name": "Pillow",
+      "description": "Image processing.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pillow"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pillow"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pillow"
+        ]
+      }
+    },
+    {
+      "id": "rich",
+      "name": "Rich",
+      "description": "Formatted terminal output.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "rich"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "rich"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "rich"
+        ]
+      }
+    },
+    {
+      "id": "httpx",
+      "name": "HTTPX",
+      "description": "Sync and async HTTP requests.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "httpx"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "httpx"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "httpx"
+        ]
+      }
+    },
+    {
+      "id": "flask",
+      "name": "Flask",
+      "description": "Web application framework.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "flask"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "flask"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "flask"
+        ]
+      }
+    },
+    {
+      "id": "fastapi",
+      "name": "FastAPI",
+      "description": "API application framework.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "fastapi"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "fastapi"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "fastapi"
+        ]
+      }
+    },
+    {
+      "id": "uvicorn",
+      "name": "Uvicorn",
+      "description": "ASGI server.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "uvicorn"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "uvicorn"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "uvicorn"
+        ]
+      }
+    },
+    {
+      "id": "pydantic",
+      "name": "Pydantic",
+      "description": "Data validation with Python types.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pydantic"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pydantic"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pydantic"
+        ]
+      }
+    },
+    {
+      "id": "pytest",
+      "name": "pytest",
+      "description": "Python testing framework.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pytest"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pytest"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pytest"
+        ]
+      }
+    },
+    {
+      "id": "ruff",
+      "name": "Ruff",
+      "description": "Python linter and formatter.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "ruff"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "ruff"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "ruff"
+        ]
+      }
+    },
+    {
+      "id": "black",
+      "name": "Black",
+      "description": "Python code formatter.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "black"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "black"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "black"
+        ]
+      }
+    },
+    {
+      "id": "mypy",
+      "name": "mypy",
+      "description": "Static type checking.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "mypy"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "mypy"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "mypy"
+        ]
+      }
+    },
+    {
+      "id": "beautifulsoup4",
+      "name": "Beautiful Soup",
+      "description": "HTML parsing and extraction.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "beautifulsoup4"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "beautifulsoup4"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "beautifulsoup4"
+        ]
+      }
+    },
+    {
+      "id": "pyyaml",
+      "name": "PyYAML",
+      "description": "YAML parser and emitter.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pyyaml"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pyyaml"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "pyyaml"
+        ]
+      }
+    },
+    {
+      "id": "click",
+      "name": "Click",
+      "description": "Command-line application framework.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "click"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "click"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "click"
+        ]
+      }
+    },
+    {
+      "id": "typer",
+      "name": "Typer",
+      "description": "Type-based command-line interfaces.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "typer"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "typer"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "typer"
+        ]
+      }
+    },
+    {
+      "id": "tqdm",
+      "name": "tqdm",
+      "description": "Progress bars.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "tqdm"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "tqdm"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "tqdm"
+        ]
+      }
+    },
+    {
+      "id": "sqlalchemy",
+      "name": "SQLAlchemy",
+      "description": "SQL toolkit and ORM.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "sqlalchemy"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "sqlalchemy"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "sqlalchemy"
+        ]
+      }
+    },
+    {
+      "id": "jinja2",
+      "name": "Jinja",
+      "description": "Template engine.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "jinja2"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "jinja2"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "jinja2"
+        ]
+      }
+    },
+    {
+      "id": "packaging",
+      "name": "Packaging",
+      "description": "Python package version utilities.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "packaging"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "packaging"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "packaging"
+        ]
+      }
+    },
+    {
+      "id": "platformdirs",
+      "name": "platformdirs",
+      "description": "Platform-specific application paths.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "platformdirs"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "platformdirs"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "platformdirs"
+        ]
+      }
+    },
+    {
+      "id": "python-dotenv",
+      "name": "python-dotenv",
+      "description": "Load environment configuration.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "python-dotenv"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "python-dotenv"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "python-dotenv"
+        ]
+      }
+    },
+    {
+      "id": "websockets",
+      "name": "websockets",
+      "description": "WebSocket client and server.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "websockets"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "websockets"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "websockets"
+        ]
+      }
+    },
+    {
+      "id": "aiohttp",
+      "name": "aiohttp",
+      "description": "Asynchronous HTTP client and server.",
+      "version": "latest",
+      "requirements": [
+        "python-env"
+      ],
+      "install": {
+        "windows": [
+          ".netspro-python/Scripts/python.exe",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "aiohttp"
+        ],
+        "macos": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "aiohttp"
+        ],
+        "linux": [
+          ".netspro-python/bin/python",
+          "-m",
+          "pip",
+          "install",
+          "--upgrade",
+          "aiohttp"
+        ]
+      }
+    }
+  ],
+  "ollama_models": [
+    {
+      "id": "llama3.2",
+      "name": "Llama 3.2",
+      "requirements": [
+        "ollama"
+      ],
+      "variants": [
+        {
+          "tag": "llama3.2:1b-instruct-q4_K_M",
+          "quantization": "Q4_K_M"
+        },
+        {
+          "tag": "llama3.2:1b-instruct-q8_0",
+          "quantization": "Q8_0"
+        },
+        {
+          "tag": "llama3.2:3b-instruct-q4_K_M",
+          "quantization": "Q4_K_M"
+        }
+      ]
+    }
+  ]
+}
