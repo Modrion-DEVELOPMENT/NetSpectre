@@ -86,23 +86,18 @@ static const std::vector<int> SHIFT = {9, 9, 4, 13, 2, 10, 3};
 // ===================== Main =====================
 int main() {
     netspro::startCatalogRefresh();
-    createJsonFile("config.json", {
-                       {"version", 1},
-                       {"theme", "dark"},
-                       {"settings", nlohmann::json::object()}
-                   });
     try {
         createJsonFile("config.json", {
             {"version", 1},
-            {"settings", nlohmann::json::object()}
+                           {"theme", "dark"},
+                           {"settings", nlohmann::json::object()}
         });
-        appConfig = readJsonFile("config.json");
         appConfig = readJsonFile("config.json");
 
         const std::string themeName = appConfig.value("theme", "dark");
         activeTheme = loadTheme(themeName);
     } catch (const std::exception& error) {
-        std::cerr << "Configuration error: " << error.what() << '\n';
+        std::cerr << "Configuration error: " << error.what() << std::endl;
         return 1;
     }
 
@@ -206,24 +201,24 @@ void readUserInput() {
 
 // ===================== Command Handling =====================
 static void help() {
-    std::cout << "\nCommands:\n";
-    std::cout << "  info                - show version and serial number\n";
-    std::cout << "  cls | clear          - clear terminal\n";
-    std::cout << "  cls -l | clear -l    - clear + redraw logo\n";
-    std::cout << "  record              - open the Record Viewer\n";
-    std::cout << "  record new          - create and open new record\n";
-    std::cout << "  record open <Name>  - open <Name>.persondata\n";
-    std::cout << "  help                - show command list\n";
-    std::cout << "  credits | --credits - show project credits and attribution\n";
-    std::cout << "  exit                - quit program\n";
-    std::cout << "\nPro Basic Commands:\n";
-    std::cout << "  proinfo             - show Pro Basic account info\n";
-    std::cout << "  prostatus           - show Pro Basic feature status\n";
-    std::cout << "\nDev Commands:\n";
-    std::cout << "  devinfo             - show dev status\n";
-    std::cout << "  devmode on|off      - toggle (DEV only)\n\n";
-    std::cout << "  devtools            - list developer tool commands\n\n";
-    if (developer) std::cout << "  downloader          - browse the demo download catalog\n";
+    std::cout << std::endl << "Commands:" << std::endl;
+    std::cout << "  info                - show version and serial number" << std::endl;
+    std::cout << "  cls | clear          - clear terminal" << std::endl;
+    std::cout << "  cls -l | clear -l    - clear + redraw logo" << std::endl;
+    std::cout << "  record              - open the Record Viewer" << std::endl;
+    std::cout << "  record new          - create and open new record" << std::endl;
+    std::cout << "  record open <Name>  - open <Name>.persondata" << std::endl;
+    std::cout << "  help                - show command list" << std::endl;
+    std::cout << "  credits | --credits - show project credits and attribution" << std::endl;
+    std::cout << "  exit                - quit program" << std::endl;
+    std::cout << std::endl << "Pro Basic Commands:" << std::endl;
+    std::cout << "  proinfo             - show Pro Basic account info" << std::endl;
+    std::cout << "  prostatus           - show Pro Basic feature status" << std::endl;
+    std::cout << std::endl << "Dev Commands:" << std::endl;
+    std::cout << "  devinfo             - show dev status" << std::endl;
+    std::cout << "  devmode on|off      - toggle (DEV only)" << std::endl << std::endl;
+    std::cout << "  devtools            - list developer tool commands" << std::endl << std::endl;
+    if (developer) std::cout << "  downloader          - browse the package download catalog" << std::endl;
 }
 
 static bool starts_with(const std::string& s, const std::string& prefix) {
@@ -234,13 +229,13 @@ void processInput() {
     std::string cmd = trim(inputLine);
 
     if (cmd == "info") {
-        std::cout << "Modrion NetSpectre C++ edition\n";
-        std::cout << "V." << version << "\n";
-        std::cout << "Serial number: " << serialNumber << "\n";
-        std::cout << "Dev mode: " << (dev_mode ? "true" : "false") << "\n";
+        std::cout << "Modrion NetSpectre C++ edition" << std::endl;
+        std::cout << "V." << version << std::endl;
+        std::cout << "Serial number: " << serialNumber << std::endl;
+        std::cout << "Dev mode: " << (dev_mode ? "true" : "false") << std::endl;
     } else if (cmd == "credits" || cmd == "--credits") {
-        std::cout << "Credits: Hendrik Hanking and the Modrion Intelligence Developer Team.\n";
-        std::cout << "Originally developed by the Modrion Intelligence Developer Team.\n";
+        std::cout << "Credits: Hendrik Hanking and the Modrion Intelligence Developer Team." << std::endl;
+        std::cout << "Originally developed by the Modrion Intelligence Developer Team." << std::endl;
     } else if (cmd == "cls" || cmd == "clear") {
         clearTerminal();
     }
@@ -265,7 +260,7 @@ void processInput() {
     else if (starts_with(cmd, "record open ")) {
         std::string name = trim(cmd.substr(std::string("record open ").size()));
         if (name.empty()) {
-            std::cout << "ERROR: Please provide a file name.\n";
+            std::cout << "ERROR: Please provide a file name." << std::endl;
             return;
         }
         openRecordFile(name);
@@ -273,39 +268,39 @@ void processInput() {
         showMainScreen();
     }
     else if (cmd == "devinfo") {
-        std::cout << "Developer mode is " << (dev_mode ? "ON" : "OFF") << "\n";
-        std::cout << "User: " << username << "\n";
+        std::cout << "Developer mode is " << (dev_mode ? "ON" : "OFF") << std::endl;
+        std::cout << "User: " << username << std::endl;
     }
     else if (cmd == "proinfo") {
         if (!pro_basic && !developer) {
-            std::cout << "Access denied (PRO BASIC or DEV only).\n";
+            std::cout << "Access denied (PRO BASIC or DEV only)." << std::endl;
             return;
         }
-        std::cout << "Pro Basic account active: " << ((pro_basic || developer) ? "true" : "false") << "\n";
-        std::cout << "User: " << username << "\n";
+        std::cout << "Pro Basic account active: " << ((pro_basic || developer) ? "true" : "false") << std::endl;
+        std::cout << "User: " << username << std::endl;
     }
     else if (cmd == "prostatus") {
         if (!pro_basic && !developer) {
-            std::cout << "Access denied (PRO BASIC or DEV only).\n";
+            std::cout << "Access denied (PRO BASIC or DEV only)." << std::endl;
             return;
         }
-        std::cout << "[PRO BASIC] Features available:\n";
-        std::cout << "- Priority account tier\n";
-        std::cout << "- Extended command set (proinfo/prostatus)\n";
-        std::cout << "- Record access\n";
+        std::cout << "[PRO BASIC] Features available:" << std::endl;
+        std::cout << "- Priority account tier" << std::endl;
+        std::cout << "- Extended command set (proinfo/prostatus)" << std::endl;
+        std::cout << "- Record access" << std::endl;
     }
     else if (starts_with(cmd, "devmode ")) {
         std::string arg = to_lower(trim(cmd.substr(std::string("devmode ").size())));
         if (!developer) {
-            std::cout << "Access denied (DEV only).\n";
+            std::cout << "Access denied (DEV only)." << std::endl;
             return;
         }
         if (arg == "on") dev_mode = true;
         else if (arg == "off") dev_mode = false;
-        else std::cout << "Usage: devmode on|off\n";
+        else std::cout << "Usage: devmode on|off" << std::endl;
     } else if (cmd == "downloader") {
         if (!developer) {
-            std::cout << "Access denied (DEV only).\n";
+            std::cout << "Access denied (DEV only)." << std::endl;
             return;
         }
         try {
@@ -313,26 +308,26 @@ void processInput() {
                                     ansiColor(activeTheme.at("accent").get<std::string>()),
                                     ansiColor(activeTheme.at("input").get<std::string>()));
         } catch (const std::exception &error) {
-            std::cerr << "Downloader error: " << error.what() << '\n';
+            std::cerr << "Downloader error: " << error.what() << std::endl;
         }
         std::cout << mainColor();
     } else if (cmd == "devtools") {
         if (!developer) {
-            std::cout << "Access denied (DEV only).\n";
+            std::cout << "Access denied (DEV only)." << std::endl;
             return;
         }
-        std::cout << "[DEV TOOLS]\n";
-        std::cout << "- devinfo\n";
-        std::cout << "- devmode on|off\n";
-        std::cout << "- devtools\n";
-        std::cout << "- downloader\n";
+        std::cout << "[DEV TOOLS]" << std::endl;
+        std::cout << "- devinfo" << std::endl;
+        std::cout << "- devmode on|off" << std::endl;
+        std::cout << "- devtools" << std::endl;
+        std::cout << "- downloader" << std::endl;
     }
     else if (cmd == "exit") {
         // main handles exit
     }
     else {
-        std::cout << "Command not found :(\n";
-        std::cout << "Tip: 'help'\n";
+        std::cout << "Command not found :(" << std::endl;
+        std::cout << "Tip: 'help'" << std::endl;
     }
 }
 
@@ -353,12 +348,12 @@ void initializeTokens() {
 
 void login() {
     logo();
-    std::cout << "\nUsername: ";
+    std::cout << std::endl << "Username: ";
     readInputLine(username);
     clearTerminal();
 
     logo();
-    std::cout << "\nPassword for " << username << ": ";
+    std::cout << std::endl << "Password for " << username << ": ";
     readInputLine(password);
 
     composedToken = username + "." + password;
@@ -368,7 +363,7 @@ void login() {
         developer = true;
         pro_basic = true;
         clearTerminal();
-        std::cout << "[Developer Mode]\n";
+        std::cout << "[Developer Mode]" << std::endl;
         showMainScreen();
         return;
     }
@@ -378,7 +373,7 @@ void login() {
         developer = false;
         pro_basic = true;
         clearTerminal();
-        std::cout << "[Pro Basic Account]\n";
+        std::cout << "[Pro Basic Account]" << std::endl;
         showMainScreen();
         return;
     }
@@ -392,7 +387,7 @@ void login() {
         return;
     }
 
-    std::cout << "Username or password not recognized.\n";
+    std::cout << "Username or password not recognized." << std::endl;
     std::this_thread::sleep_for(std::chrono::seconds(4));
     clearTerminal();
     login();
@@ -400,35 +395,35 @@ void login() {
 
 void showMainScreen() {
     if (dev_mode) {
-        std::cout << "Version: " << version << "\n";
+        std::cout << "Version: " << version << std::endl;
     }
     else if (pro_basic) {
-        std::cout << "Welcome to Modrion NetSpectre C++ [PRO BASIC]\n";
-        std::cout << "Version: " << short_version << "\n";
-        std::cout << "Feedback: Hendrik.Hanking@icloud.com.\n";
+        std::cout << "Welcome to Modrion NetSpectre C++ [PRO BASIC]" << std::endl;
+        std::cout << "Version: " << short_version << std::endl;
+        std::cout << "Feedback: Hendrik.Hanking@icloud.com." << std::endl;
     }
     else {
-        std::cout << "Welcome to Modrion NetSpectre C++\n";
-        std::cout << "Version: " << short_version << "\n";
-        std::cout << "Feedback: Hendrik.Hanking@icloud.com.\n";
+        std::cout << "Welcome to Modrion NetSpectre C++" << std::endl;
+        std::cout << "Version: " << short_version << std::endl;
+        std::cout << "Feedback: Hendrik.Hanking@icloud.com." << std::endl;
     }
     logo();
-    std::cout << "\n";
+    std::cout << std::endl;
 }
 
 void logo() {
     const std::string textColor = mainColor();
     const std::string accentColor = ansiColor(activeTheme.at("accent").get<std::string>());
 
-    std::cout << textColor << R"(   _  __    __    ____             __            ___  ___  ____ )" << "\n";
-    std::cout << textColor << R"(  / |/ /__ / /_  / __/__  ___ ____/ /________   / _ \/ _ \/ __ \)" << "\n";
-    std::cout << textColor << R"( /    / -_) __/ _\ \/ _ \/ -_) __/ __/ __/ -_) / ___/ , _/ /_/ /)" << "\n";
-    std::cout << textColor << R"(/_/|_/\__/\__/ /___/ .__/\__/\__/\__/__/  \__//_/  /_/|_|\____/ )" << "\n";
+    std::cout << textColor << R"(   _  __    __    ____             __            ___  ___  ____ )" << std::endl;
+    std::cout << textColor << R"(  / |/ /__ / /_  / __/__  ___ ____/ /________   / _ \/ _ \/ __ \)" << std::endl;
+    std::cout << textColor << R"( /    / -_) __/ _\ \/ _ \/ -_) __/ __/ __/ -_) / ___/ , _/ /_/ /)" << std::endl;
+    std::cout << textColor << R"(/_/|_/\__/\__/ /___/ .__/\__/\__/\__/__/  \__//_/  /_/|_|\____/ )" << std::endl;
     std::cout << accentColor << "C++ EDITION" << textColor << "       /_/";
     if (dev_mode) {
         std::cout << accentColor << "                     Welcome developer! :)";
     }
-    std::cout << mainColor() << "\n";
+    std::cout << mainColor() << std::endl;
 }
 
 // ===================== Record Viewer - UX =====================
@@ -438,7 +433,7 @@ void fakeLoading(double durationSeconds) {
 
     for (int fillSteps = 0; fillSteps <= steps; ++fillSteps) {
         clearTerminal();
-        std::cout << std::string(fillSteps, 'X') << std::string(steps - fillSteps, '0') << "\n";
+        std::cout << std::string(fillSteps, 'X') << std::string(steps - fillSteps, '0') << std::endl;
         auto ms = static_cast<int>(waitSeconds * 1000.0);
         std::this_thread::sleep_for(std::chrono::milliseconds(ms));
     }
@@ -460,7 +455,7 @@ void openRecordInteractive() {
 
 void openRecordFile(const std::string& fileName) {
     if (trim(fileName).empty()) {
-        std::cout << "ERROR: Empty file name.\n";
+        std::cout << "ERROR: Empty file name." << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(2));
         return;
     }
@@ -474,7 +469,7 @@ void openRecordFile(const std::string& fileName) {
     try {
         content_encrypted = read_file_utf8(fullname);
     } catch (...) {
-        std::cout << "ERROR: File not found: " << fullname << "\n";
+        std::cout << "ERROR: File not found: " << fullname << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(2));
         return;
     }
@@ -482,8 +477,8 @@ void openRecordFile(const std::string& fileName) {
     std::string content_plain = decryptText(content_encrypted);
 
     clearTerminal();
-    std::cout << content_plain << "\n";
-    std::cout << "---- New entries (empty line = save & exit) ----\n";
+    std::cout << content_plain << std::endl;
+    std::cout << "---- New entries (empty line = save & exit) ----" << std::endl;
 
     while (true) {
         std::string newEntry;
@@ -497,13 +492,13 @@ void openRecordFile(const std::string& fileName) {
             try {
                 write_file_utf8(fullname, encryptedText);
             } catch (...) {
-                std::cout << "ERROR: Could not save file.\n";
+                std::cout << "ERROR: Could not save file." << std::endl;
                 std::this_thread::sleep_for(std::chrono::seconds(2));
                 return;
             }
 
             clearTerminal();
-            std::cout << "Saved.\n";
+            std::cout << "Saved." << std::endl;
             std::cout << "ENTER...";
             std::string dummy;
             readInputLine(dummy);
@@ -513,8 +508,8 @@ void openRecordFile(const std::string& fileName) {
         content_plain += "\n" + newEntry;
 
         clearTerminal();
-        std::cout << content_plain << "\n";
-        std::cout << "---- New entries (empty line = save & exit) ----\n";
+        std::cout << content_plain << std::endl;
+        std::cout << "---- New entries (empty line = save & exit) ----" << std::endl;
     }
 }
 
@@ -532,7 +527,7 @@ std::string createNewRecord() {
         name = trim(name);
 
         if (name.empty()) {
-            std::cout << "ERROR: Last name cannot be empty\n";
+            std::cout << "ERROR: Last name cannot be empty" << std::endl;
             std::this_thread::sleep_for(std::chrono::seconds(2));
             continue;
         }
@@ -555,7 +550,7 @@ std::string createNewRecord() {
         }
 
         clearTerminal();
-        std::cout << "New key:\n" << key << "\n";
+        std::cout << "New key:" << std::endl << key << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(2));
 
         std::string default_plain;
@@ -567,12 +562,12 @@ std::string createNewRecord() {
         std::string default_encrypted = encryptText(default_plain);
 
         clearTerminal();
-        std::cout << "Creating file...\n";
+        std::cout << "Creating file..." << std::endl;
 
         try {
             write_file_utf8(fullname, default_encrypted);
         } catch (...) {
-            std::cout << "ERROR: Could not write file: " << fullname << "\n";
+            std::cout << "ERROR: Could not write file: " << fullname << std::endl;
             std::this_thread::sleep_for(std::chrono::seconds(2));
             continue;
         }
